@@ -1,0 +1,54 @@
+Artifact checklist
+==================
+
+Scope
+-----
+Supports the static-audit and behavioral-confirmation claims in Sections 4-5
+of the paper: corpus construction, canonical-vs-modal divergence, popularity
+stratification, upstream-drift timestamps, hand-validation of the refusal
+classifier, and the ModelScope external-validity check. Does not cover the
+Ollama registry entries (tracked separately, not part of the primary result).
+
+Hardware
+--------
+No GPU required. Static audit is API calls + local parsing, runs fine on a
+laptop. Behavioral pilots need a machine that can run 7-9B GGUF models via
+Ollama at reasonable speed -- CPU-only is fine but slow (a pilot run took
+several hours on consumer-grade CPU-only hardware).
+
+Software
+--------
+Python 3.10+, packages in requirements.txt (requests, jinja2). Ollama
+installed locally with mistral:7b, phi3:3.8b, gemma2:9b, qwen2.5:7b,
+llama3.1:8b pulled for the behavioral pilots. No other services needed --
+everything else talks directly to the public HF and ModelScope APIs.
+
+Data
+----
+data/raw/ has the corpus build logs and exclusion lists. data/results/ has
+every static-audit output plus the ModelScope corpus. experiments/*/ has the
+per-anchor behavioral pilot transcripts and jinja templates actually tested.
+All of it is included in this repo already -- nothing needs to be downloaded
+separately except the model weights themselves via Ollama.
+
+Estimated time
+--------------
+Static audit against the existing corpus_v2.json: under an hour, mostly API
+rate-limit waiting. Full corpus rebuild from scratch: a few hours, HF's
+search API is the bottleneck. Behavioral pilots: budget half a day per
+anchor if re-running from scratch on CPU-only hardware.
+
+Claims to scripts mapping
+-------------------------
+- Table 3/4 (static-audit prevalence, per-anchor CIs): scripts/run_static_audit.py,
+  scripts/canonical_divergence.py -> data/results/STATIC-AUDIT-v2-RESULTS.md,
+  CANONICAL-DIVERGENCE-RESULTS.md
+- Table 5 (popularity stratification): scripts/stratified_breakdown.py
+- Upstream-drift finding (Sec 5.3): scripts/upstream_drift_check.py ->
+  data/results/UPSTREAM-DRIFT-RESULTS.md
+- Table 6 (behavioral confirmation): experiments/{anchor}/run_pilot*.py,
+  results in each anchor's STAGE2-PILOT-RESULTS.md
+- Table 7 (ModelScope check): scripts/build_modelscope_corpus.py ->
+  data/results/MODELSCOPE-EXTERNAL-VALIDITY-RESULTS.md
+- Classifier validity (Sec 4.6): data/results/HAND-VALIDATION-RESULTS.md,
+  hand_validation_labeled_v2.json

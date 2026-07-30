@@ -1,0 +1,126 @@
+
+{%- macro render_json(d, indent=4) -%}
+{%- if d is string %}
+{{ '"' + d + '"' }}
+{%- elif d is mapping %}
+{%- for key, value in d.items() %}
+{%- if value is string %}
+{{ " " * indent + '"' + key + '": "' + value + '"' }}
+{%- elif value is mapping %}
+{{ " " * indent + '"' + key + '": {' }}
+{{ render_json(value, indent + 4) }}
+{{ " " * indent + "}" }}
+{%- elif value is sequence %}
+{{ " " * indent + '"' + key + '": [
+' }}
+{%- for item in value %}
+{{- " " * (indent + 4) + render_json(item, indent + 4) }}
+{%- if not loop.last %},
+{% endif %}
+{%- endfor %}
+{{ '
+' + " " * indent + "]" }}
+{%- else %}
+{{ " " * indent + '"' + key + '": ' + value|string }}
+{%- endif %}
+{%- if not loop.last %},
+{% endif %}
+{%- endfor %}
+{%- elif d is sequence %}
+{%- for item in d %}
+{{ " " * indent + render_json(item, indent + 4) }}
+{%- if not loop.last %},
+{% endif %}
+{%- endfor %}
+{%- else %}
+{{ " " * indent + d|string }}
+{%- endif %}
+{%- endmacro %}
+
+
+{#- This block checks system prompt and list of tools #}
+{%- if not add_generation_prompt is defined %}
+    {%- set add_generation_prompt = false %}
+{%- endif %}
+{%- if messages[0]["role"] == "system" %}
+    {%- set system_message = messages[0]["content"] %}
+    {%- set loop_messages = messages[1:] %}
+{%- else %}
+    {%- set loop_messages = messages %}
+    {%- set system_message = "" %}
+{%- endif %}
+{%- if not tools is defined %}
+    {%- set tools = none %}
+{%- endif %}
+{%- set user_messages = loop_messages | selectattr("role", "equalto", "user") | list %}
+
+
+{#- This block checks for alternating user/model messages, skipping tool calling messages #}
+{%- set ns = namespace() %}
+{%- set ns.index = 0 %}
+{%- for message in loop_messages %}
+    {%- if (message["role"] == "user" or message["role"] == "function-response") != (ns.index % 2 == 0) %}
+        {{- raise_exception("After the optional system message, conversation roles must alternate user/model/user/model/... NB: 'function-call' is same as the 'model' and 'function-response' is same as the 'user'!") }}
+    {%- endif %}
+    {%- set ns.index = ns.index + 1 %}
+{%- endfor %}
+
+
+{#- This block format full dialogue messages #}
+{{- bos_token }}
+{{- "<start_of_turn>user" + '
+' }}
+{%- if system_message != "" %}
+    {{- system_message }}
+{%- endif %}
+{%- if tools is not none %}
+    {%- for tool in tools %}
+        {%- set tool = tool.function %}
+        {{- '{
+' }}
+        {{- render_json(tool, 4) }}
+        {%- if not loop.last %}
+            {{- "
+},
+" }}
+        {%- else %}
+            {{- "
+}
+" }}
+        {% endif %}
+    {%- endfor %}
+    {%- elif system_message != "" %}
+        {{- '
+
+' }}
+{%- endif %}
+{{ loop_messages[0]['content'] + '<end_of_turn>
+' }}
+{%- for message in loop_messages[1:] %}
+    {%- if message["role"] == "user" %}
+        {{- "<start_of_turn>user" + '
+' + message['content'] + '<end_of_turn>
+' }}
+    {%- elif message["role"] == "model" %}
+        {{- "<start_of_turn>model" + '
+' + message['content'] + '<end_of_turn>
+' }}
+    {%- elif message["role"] == "function-call" %}
+        {{- "<start_of_turn>model" + '
+' + "Function call: " + message['content'] + '<end_of_turn>
+' }}
+    {%- elif message["role"] == "function-response" %}
+        {{- "<start_of_turn>user" + '
+' + "Function response: " + message['content'] + '<end_of_turn>
+' }}
+    {%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+    {%- if loop_messages[-1]['role'] == "user" or loop_messages[-1]['role'] == "function-response" %}
+{{ '<start_of_turn>model
+' }}
+    {%- else %}
+        {{- raise_exception("For add_generation_prompt=True, the last message role must be 'user' or 'function-response'.") }}
+    {%- endif %}
+{%- endif %}
+

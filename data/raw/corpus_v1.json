@@ -1,0 +1,489 @@
+[
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "downloads": 288471,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 24,
+    "gguf_filenames_sample": [
+      "Meta-Llama-3.1-8B-Instruct-IQ2_M.gguf",
+      "Meta-Llama-3.1-8B-Instruct-IQ3_M.gguf",
+      "Meta-Llama-3.1-8B-Instruct-IQ3_XS.gguf",
+      "Meta-Llama-3.1-8B-Instruct-IQ4_NL.gguf",
+      "Meta-Llama-3.1-8B-Instruct-IQ4_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "downloads": 71734,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 6,
+    "gguf_filenames_sample": [
+      "Meta-Llama-3.1-8B-Instruct-IQ4_XS.gguf",
+      "Meta-Llama-3.1-8B-Instruct-Q3_K_L.gguf",
+      "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+      "Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf",
+      "Meta-Llama-3.1-8B-Instruct-Q6_K.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "MaziyarPanahi/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "downloads": 69061,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 10,
+    "gguf_filenames_sample": [
+      "Meta-Llama-3.1-8B-Instruct.Q2_K.gguf",
+      "Meta-Llama-3.1-8B-Instruct.Q3_K_L.gguf",
+      "Meta-Llama-3.1-8B-Instruct.Q3_K_M.gguf",
+      "Meta-Llama-3.1-8B-Instruct.Q3_K_S.gguf",
+      "Meta-Llama-3.1-8B-Instruct.Q4_K_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "brittlewis12/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "downloads": 879,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 24,
+    "gguf_filenames_sample": [
+      "meta-llama-3.1-8b-instruct.IQ1_M.gguf",
+      "meta-llama-3.1-8b-instruct.IQ1_S.gguf",
+      "meta-llama-3.1-8b-instruct.IQ2_M.gguf",
+      "meta-llama-3.1-8b-instruct.IQ2_S.gguf",
+      "meta-llama-3.1-8b-instruct.IQ2_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "YorkieOH10/Meta-Llama-3.1-8B-Instruct-Q8_0-GGUF",
+    "downloads": 1138,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "meta-llama-3.1-8b-instruct-q8_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "GPT4All-Community/Meta-Llama-3.1-8B-Instruct-128k-GGUF",
+    "downloads": 1197,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 2,
+    "gguf_filenames_sample": [
+      "Meta-Llama-3.1-8B-Instruct-128k-Q4_0.gguf",
+      "Meta-Llama-3.1-8B-Instruct-128k-f16.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "ggml-org/Meta-Llama-3.1-8B-Instruct-Q4_0-GGUF",
+    "downloads": 2056,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "meta-llama-3.1-8b-instruct-q4_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "ollama::llama3.1:8b",
+    "downloads": null,
+    "popularity_bucket": "official_registry",
+    "n_gguf_files": null,
+    "gguf_filenames_sample": []
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF",
+    "downloads": 74237,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 16,
+    "gguf_filenames_sample": [
+      "Mistral-7B-Instruct-v0.3.IQ1_M.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ1_S.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ2_XS.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ3_XS.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ4_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "lmstudio-community/Mistral-7B-Instruct-v0.3-GGUF",
+    "downloads": 15562,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 8,
+    "gguf_filenames_sample": [
+      "Mistral-7B-Instruct-v0.3-IQ3_M.gguf",
+      "Mistral-7B-Instruct-v0.3-IQ4_NL.gguf",
+      "Mistral-7B-Instruct-v0.3-Q3_K_L.gguf",
+      "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "SanctumAI/Mistral-7B-Instruct-v0.3-GGUF",
+    "downloads": 13350,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 17,
+    "gguf_filenames_sample": [
+      "mistral-7b-instruct-v0.3.Q2_K.gguf",
+      "mistral-7b-instruct-v0.3.Q3_K_L.gguf",
+      "mistral-7b-instruct-v0.3.Q3_K_M.gguf",
+      "mistral-7b-instruct-v0.3.Q3_K_S.gguf",
+      "mistral-7b-instruct-v0.3.Q4_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "NonMiFrega/Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF",
+    "downloads": 86,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "mistral-7b-instruct-v0.3-q4_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "minion1905/Mistral-7B-Instruct-v0.3-GGUF",
+    "downloads": 91,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 16,
+    "gguf_filenames_sample": [
+      "Mistral-7B-Instruct-v0.3.IQ1_M.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ1_S.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ2_XS.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ3_XS.gguf",
+      "Mistral-7B-Instruct-v0.3.IQ4_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "EnlistedGhost/Mistral-7B-Instruct-v0.3-GGUF",
+    "downloads": 95,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 7,
+    "gguf_filenames_sample": [
+      "Mistral-7B-Instruct-v0.3-BF16.gguf",
+      "Mistral-7B-Instruct-v0.3:Q2_K_SX.gguf",
+      "Mistral-7B-Instruct-v0.3:Q3_K_SX.gguf",
+      "Mistral-7B-Instruct-v0.3:Q4_K_SX.gguf",
+      "Mistral-7B-Instruct-v0.3:Q5_K_SX.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "tokoin/Mistral-7B-Instruct-v0.3-Q5_0-GGUF",
+    "downloads": 106,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "mistral-7b-instruct-v0.3-q5_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "ollama::mistral:7b",
+    "downloads": null,
+    "popularity_bucket": "official_registry",
+    "n_gguf_files": null,
+    "gguf_filenames_sample": []
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+    "downloads": 125936,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 24,
+    "gguf_filenames_sample": [
+      "Qwen2.5-7B-Instruct-IQ2_M.gguf",
+      "Qwen2.5-7B-Instruct-IQ3_M.gguf",
+      "Qwen2.5-7B-Instruct-IQ3_XS.gguf",
+      "Qwen2.5-7B-Instruct-IQ4_XS.gguf",
+      "Qwen2.5-7B-Instruct-Q2_K.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+    "downloads": 82380,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 19,
+    "gguf_filenames_sample": [
+      "qwen2.5-7b-instruct-fp16-00001-of-00004.gguf",
+      "qwen2.5-7b-instruct-fp16-00002-of-00004.gguf",
+      "qwen2.5-7b-instruct-fp16-00003-of-00004.gguf",
+      "qwen2.5-7b-instruct-fp16-00004-of-00004.gguf",
+      "qwen2.5-7b-instruct-q2_k.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "MaziyarPanahi/Qwen2.5-7B-Instruct-GGUF",
+    "downloads": 66231,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 16,
+    "gguf_filenames_sample": [
+      "Qwen2.5-7B-Instruct.IQ1_M.gguf",
+      "Qwen2.5-7B-Instruct.IQ1_S.gguf",
+      "Qwen2.5-7B-Instruct.IQ2_XS.gguf",
+      "Qwen2.5-7B-Instruct.IQ3_XS.gguf",
+      "Qwen2.5-7B-Instruct.IQ4_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-i1-GGUF",
+    "downloads": 1834,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 29,
+    "gguf_filenames_sample": [
+      "Qwen2.5-7B-Instruct.i1-IQ1_M.gguf",
+      "Qwen2.5-7B-Instruct.i1-IQ1_S.gguf",
+      "Qwen2.5-7B-Instruct.i1-IQ2_M.gguf",
+      "Qwen2.5-7B-Instruct.i1-IQ2_S.gguf",
+      "Qwen2.5-7B-Instruct.i1-IQ2_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "idasummer/Qwen2.5-7B-Instruct-Q5_K_M-GGUF",
+    "downloads": 2902,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "qwen2.5-7b-instruct-q5_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "paultimothymooney/Qwen2.5-7B-Instruct-Q4_K_M-GGUF",
+    "downloads": 6387,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "qwen2.5-7b-instruct-q4_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lmstudio-community/Qwen2.5-7B-Instruct-GGUF",
+    "downloads": 23481,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 4,
+    "gguf_filenames_sample": [
+      "Qwen2.5-7B-Instruct-Q3_K_L.gguf",
+      "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+      "Qwen2.5-7B-Instruct-Q6_K.gguf",
+      "Qwen2.5-7B-Instruct-Q8_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ollama::qwen2.5:7b",
+    "downloads": null,
+    "popularity_bucket": "official_registry",
+    "n_gguf_files": null,
+    "gguf_filenames_sample": []
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "bartowski/gemma-2-9b-it-GGUF",
+    "downloads": 21640,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 29,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it-IQ2_M.gguf",
+      "gemma-2-9b-it-IQ2_S.gguf",
+      "gemma-2-9b-it-IQ2_XS.gguf",
+      "gemma-2-9b-it-IQ3_M.gguf",
+      "gemma-2-9b-it-IQ3_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "SanctumAI/gemma-2-9b-it-GGUF",
+    "downloads": 17643,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 17,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it.Q2_K.gguf",
+      "gemma-2-9b-it.Q3_K_L.gguf",
+      "gemma-2-9b-it.Q3_K_M.gguf",
+      "gemma-2-9b-it.Q3_K_S.gguf",
+      "gemma-2-9b-it.Q4_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "lmstudio-community/gemma-2-9b-it-GGUF",
+    "downloads": 8099,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 6,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it-IQ4_XS.gguf",
+      "gemma-2-9b-it-Q3_K_L.gguf",
+      "gemma-2-9b-it-Q4_K_M.gguf",
+      "gemma-2-9b-it-Q5_K_M.gguf",
+      "gemma-2-9b-it-Q6_K.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-i1-GGUF",
+    "downloads": 368,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 21,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it.i1-IQ1_M.gguf",
+      "gemma-2-9b-it.i1-IQ1_S.gguf",
+      "gemma-2-9b-it.i1-IQ2_M.gguf",
+      "gemma-2-9b-it.i1-IQ2_S.gguf",
+      "gemma-2-9b-it.i1-IQ2_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "second-state/gemma-2-9b-it-GGUF",
+    "downloads": 504,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 13,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it-Q2_K.gguf",
+      "gemma-2-9b-it-Q3_K_L.gguf",
+      "gemma-2-9b-it-Q3_K_M.gguf",
+      "gemma-2-9b-it-Q3_K_S.gguf",
+      "gemma-2-9b-it-Q4_0.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "qwp4w3hyb/gemma-2-9b-it-iMat-GGUF",
+    "downloads": 687,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 9,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it-bf16.gguf",
+      "gemma-2-9b-it-imat-IQ1_S.gguf",
+      "gemma-2-9b-it-imat-IQ2_XXS.gguf",
+      "gemma-2-9b-it-imat-IQ3_XXS.gguf",
+      "gemma-2-9b-it-imat-IQ4_XS.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "zhezhe/gemma-2-9b-it-Q4_K_M-GGUF",
+    "downloads": 717,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "gemma-2-9b-it-q4_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "ollama::gemma2:9b",
+    "downloads": null,
+    "popularity_bucket": "official_registry",
+    "n_gguf_files": null,
+    "gguf_filenames_sample": []
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "bartowski/Phi-3.1-mini-4k-instruct-GGUF",
+    "downloads": 2318,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 20,
+    "gguf_filenames_sample": [
+      "Phi-3.1-mini-4k-instruct-IQ2_M.gguf",
+      "Phi-3.1-mini-4k-instruct-IQ3_M.gguf",
+      "Phi-3.1-mini-4k-instruct-IQ3_XS.gguf",
+      "Phi-3.1-mini-4k-instruct-IQ4_XS.gguf",
+      "Phi-3.1-mini-4k-instruct-Q2_K.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "lmstudio-community/Phi-3.1-mini-4k-instruct-GGUF",
+    "downloads": 2163,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 7,
+    "gguf_filenames_sample": [
+      "Phi-3.1-mini-4k-instruct-IQ3_M.gguf",
+      "Phi-3.1-mini-4k-instruct-IQ4_XS.gguf",
+      "Phi-3.1-mini-4k-instruct-Q3_K_L.gguf",
+      "Phi-3.1-mini-4k-instruct-Q4_K_M.gguf",
+      "Phi-3.1-mini-4k-instruct-Q5_K_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "legraphista/Phi-3-mini-4k-instruct-update2024_07_03-IMat-GGUF",
+    "downloads": 1622,
+    "popularity_bucket": "high_popularity",
+    "n_gguf_files": 25,
+    "gguf_filenames_sample": [
+      "Phi-3-mini-4k-instruct.BF16.gguf",
+      "Phi-3-mini-4k-instruct.FP16.gguf",
+      "Phi-3-mini-4k-instruct.IQ1_M.gguf",
+      "Phi-3-mini-4k-instruct.IQ1_S.gguf",
+      "Phi-3-mini-4k-instruct.IQ2_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "alal123/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "downloads": 154,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "phi-3-mini-4k-instruct-q4_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "edsoncarvalhointuria/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "downloads": 163,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 1,
+    "gguf_filenames_sample": [
+      "phi-3-mini-4k-instruct-q4_k_m.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "tensorblock/Phi-3-mini-4k-instruct-GGUF",
+    "downloads": 166,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 2,
+    "gguf_filenames_sample": [
+      "Phi-3-mini-4k-instruct-Q2_K.gguf",
+      "Phi-3-mini-4k-instruct-Q3_K_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "DhruvalLabs/Phi-3-mini-4k-instruct-GGUF",
+    "downloads": 180,
+    "popularity_bucket": "long_tail",
+    "n_gguf_files": 10,
+    "gguf_filenames_sample": [
+      "Phi-3-mini-4k-instruct-Q2_K.gguf",
+      "Phi-3-mini-4k-instruct-Q3_K_L.gguf",
+      "Phi-3-mini-4k-instruct-Q3_K_M.gguf",
+      "Phi-3-mini-4k-instruct-Q3_K_S.gguf",
+      "Phi-3-mini-4k-instruct-Q4_K_M.gguf"
+    ]
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "ollama::phi3:3.8b",
+    "downloads": null,
+    "popularity_bucket": "official_registry",
+    "n_gguf_files": null,
+    "gguf_filenames_sample": []
+  }
+]

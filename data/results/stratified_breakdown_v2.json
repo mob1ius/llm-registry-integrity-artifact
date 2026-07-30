@@ -1,0 +1,67 @@
+{
+  "total_repos_analyzed": 143,
+  "by_bucket": {
+    "high_popularity": {
+      "n": 75,
+      "diverging": 26,
+      "pct": 34.7
+    },
+    "long_tail": {
+      "n": 68,
+      "diverging": 20,
+      "pct": 29.4
+    }
+  },
+  "by_anchor_and_bucket": {
+    "Llama-3.1-8B-Instruct / high_popularity": {
+      "n": 15,
+      "diverging": 5,
+      "pct": 33.3
+    },
+    "Llama-3.1-8B-Instruct / long_tail": {
+      "n": 14,
+      "diverging": 8,
+      "pct": 57.1
+    },
+    "Mistral-7B-Instruct-v0.3 / high_popularity": {
+      "n": 15,
+      "diverging": 11,
+      "pct": 73.3
+    },
+    "Mistral-7B-Instruct-v0.3 / long_tail": {
+      "n": 20,
+      "diverging": 7,
+      "pct": 35.0
+    },
+    "Phi-3-mini-4k-instruct / high_popularity": {
+      "n": 15,
+      "diverging": 4,
+      "pct": 26.7
+    },
+    "Phi-3-mini-4k-instruct / long_tail": {
+      "n": 20,
+      "diverging": 4,
+      "pct": 20.0
+    },
+    "Qwen2.5-7B-Instruct / high_popularity": {
+      "n": 15,
+      "diverging": 4,
+      "pct": 26.7
+    },
+    "Qwen2.5-7B-Instruct / long_tail": {
+      "n": 2,
+      "diverging": 0,
+      "pct": 0.0
+    },
+    "gemma-2-9b-it / high_popularity": {
+      "n": 15,
+      "diverging": 2,
+      "pct": 13.3
+    },
+    "gemma-2-9b-it / long_tail": {
+      "n": 12,
+      "diverging": 1,
+      "pct": 8.3
+    }
+  }
+}

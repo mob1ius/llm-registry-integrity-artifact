@@ -1,0 +1,883 @@
+{
+  "entries": [
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "downloads": 288471,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 24,
+      "gguf_filenames_sample": [
+        "Meta-Llama-3.1-8B-Instruct-IQ2_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-IQ3_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-IQ3_XS.gguf",
+        "Meta-Llama-3.1-8B-Instruct-IQ4_NL.gguf",
+        "Meta-Llama-3.1-8B-Instruct-IQ4_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{- bos_token }}\n{%- if custom_tools is defined %}\n    {%- set tools = custom_tools %}\n{%- endif %}\n{%- if not tools_in_user_message is defined %}\n    {%- set tools_in_user_message = true %}\n{%- endif %}\n{%- if not date_string is defined %}\n    {%- set date_string = \"26 Jul 2024\" %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = none %}\n{%- endif %}\n\n{#- This block extracts the system message, so we can slot it into the right place. #}\n{%- if messages[0]['role'] == 'system' %}\n    {%- set system_message = messages[0]['content']|trim %}\n    {%- set messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n{%- endif %}\n\n{#- System message + builtin tools #}\n{{- \"<|start_header_id|>system<|end_header_id|>\\n\\n\" }}\n{%- if builtin_tools is defined or tools is not none %}\n    {{- \"Environment: ipython\\n\" }}\n{%- endif %}\n{%- if builtin_tools is defined %}\n    {{- \"Tools: \" + builtin_tools | reject('equalto', 'code_interpreter') | join(\", \") + \"\\n\\n\"}}\n{%- endif %}\n{{- \"Cutting Knowledge Date: December 2023\\n\" }}\n{{- \"Today Date: \" + date_string + \"\\n\\n\" }}\n{%- if tools is not none and not tools_in_user_message %}\n    {{- \"You have access to the following functions. To call a function, please respond with JSON for a function call.\" }}\n    {{- 'Respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' }}\n    {{- \"Do not use variables.\\n\\n\" }}\n    {%- for t in tools %}\n        {{- t | tojson(indent=4) }}\n        {{- \"\\n\\n\" }}\n    {%- endfor %}\n{%- endif %}\n{{- system_message }}\n{{- \"<|eot_id|>\" }}\n\n{#- Custom tools are passed in a user message with some extra guidance #}\n{%- if tools_in_user_message and not tools is none %}\n    {#- Extract the first user message so we can plug it in here #}\n    {%- if messages | length != 0 %}\n        {%- set first_user_message = messages[0]['content']|trim %}\n        {%- set messages = messages[1:] %}\n    {%- else %}\n        {{- raise_exception(\"Cannot put tools in the first user message when there's no first user message!\") }}\n{%- endif %}\n    {{- '<|start_header_id|>user<|end_header_id|>\\n\\n' -}}\n    {{- \"Given the following functions, please respond with a JSON for a function call \" }}\n    {{- \"with its proper arguments that best answers the given prompt.\\n\\n\" }}\n    {{- 'Respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' }}\n    {{- \"Do not use variables.\\n\\n\" }}\n    {%- for t in tools %}\n        {{- t | tojson(indent=4) }}\n        {{- \"\\n\\n\" }}\n    {%- endfor %}\n    {{- first_user_message + \"<|eot_id|>\"}}\n{%- endif %}\n\n{%- for message in messages %}\n    {%- if not (message.role == 'ipython' or message.role == 'tool' or 'tool_calls' in message) %}\n        {{- '<|start_header_id|>' + message['role'] + '<|end_header_id|>\\n\\n'+ message['content'] | trim + '<|eot_id|>' }}\n    {%- elif 'tool_calls' in message %}\n        {%- if not message.tool_calls|length == 1 %}\n            {{- raise_exception(\"This model only supports single tool-calls at once!\") }}\n        {%- endif %}\n        {%- set tool_call = message.tool_calls[0].function %}\n        {%- if builtin_tools is defined and tool_call.name in builtin_tools %}\n            {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' -}}\n            {{- \"<|python_tag|>\" + tool_call.name + \".call(\" }}\n            {%- for arg_name, arg_val in tool_call.arguments | items %}\n                {{- arg_name + '=\"' + arg_val + '\"' }}\n                {%- if not loop.last %}\n                    {{- \", \" }}\n                {%- endif %}\n                {%- endfor %}\n            {{- \")\" }}\n        {%- else  %}\n            {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' -}}\n            {{- '{\"name\": \"' + tool_call.name + '\", ' }}\n            {{- '\"parameters\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- \"}\" }}\n        {%- endif %}\n        {%- if builtin_tools is defined %}\n            {#- This means we're in ipython mode #}\n            {{- \"<|eom_id|>\" }}\n        {%- else %}\n            {{- \"<|eot_id|>\" }}\n        {%- endif %}\n    {%- elif message.role == \"tool\" or message.role == \"ipython\" %}\n        {{- \"<|start_header_id|>ipython<|end_header_id|>\\n\\n\" }}\n        {%- if message.content is mapping or message.content is iterable %}\n            {{- message.content | tojson }}\n        {%- else %}\n            {{- message.content }}\n        {%- endif %}\n        {{- \"<|eot_id|>\" }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+      "chat_template_len": 4614,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "downloads": 71734,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 6,
+      "gguf_filenames_sample": [
+        "Meta-Llama-3.1-8B-Instruct-IQ4_XS.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q3_K_L.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct-Q6_K.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{- bos_token }}\n{%- if custom_tools is defined %}\n    {%- set tools = custom_tools %}\n{%- endif %}\n{%- if not tools_in_user_message is defined %}\n    {%- set tools_in_user_message = true %}\n{%- endif %}\n{%- if not date_string is defined %}\n    {%- set date_string = \"26 Jul 2024\" %}\n{%- endif %}\n\n{#- This block extracts the system message, so we can slot it into the right place. #}\n{%- if messages[0]['role'] == 'system' %}\n    {%- set system_message = messages[0]['content']|trim %}\n    {%- set messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n{%- endif %}\n\n{#- System message + builtin tools #}\n{{- \"<|start_header_id|>system<|end_header_id|>\\n\\n\" }}\n{%- if builtin_tools is defined or tools is not none %}\n    {{- \"Environment: ipython\\n\" }}\n{%- endif %}\n{%- if builtin_tools is defined %}\n    {{- \"Tools: \" + builtin_tools | reject('equalto', 'code_interpreter') | join(\", \") + \"\\n\\n\"}}\n{%- endif %}\n{{- \"Cutting Knowledge Date: December 2023\\n\" }}\n{{- \"Today Date: \" + date_string + \"\\n\\n\" }}\n{%- if tools is not none and not tools_in_user_message %}\n    {{- \"You have access to the following functions. To call a function, please respond with JSON for a function call.\" }}\n    {{- 'Respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' }}\n    {{- \"Do not use variables.\\n\\n\" }}\n    {%- for t in tools %}\n        {{- t | tojson(indent=4) }}\n        {{- \"\\n\\n\" }}\n    {%- endfor %}\n{%- endif %}\n{{- system_message }}\n{{- \"<|eot_id|>\" }}\n\n{#- Custom tools are passed in a user message with some extra guidance #}\n{%- if tools_in_user_message and not tools is none %}\n    {#- Extract the first user message so we can plug it in here #}\n    {%- if messages | length != 0 %}\n        {%- set first_user_message = messages[0]['content']|trim %}\n        {%- set messages = messages[1:] %}\n    {%- else %}\n        {{- raise_exception(\"Cannot put tools in the first user message when there's no first user message!\") }}\n{%- endif %}\n    {{- '<|start_header_id|>user<|end_header_id|>\\n\\n' -}}\n    {{- \"Given the following functions, please respond with a JSON for a function call \" }}\n    {{- \"with its proper arguments that best answers the given prompt.\\n\\n\" }}\n    {{- 'Respond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}.' }}\n    {{- \"Do not use variables.\\n\\n\" }}\n    {%- for t in tools %}\n        {{- t | tojson(indent=4) }}\n        {{- \"\\n\\n\" }}\n    {%- endfor %}\n    {{- first_user_message + \"<|eot_id|>\"}}\n{%- endif %}\n\n{%- for message in messages %}\n    {%- if not (message.role == 'ipython' or message.role == 'tool' or 'tool_calls' in message) %}\n        {{- '<|start_header_id|>' + message['role'] + '<|end_header_id|>\\n\\n'+ message['content'] | trim + '<|eot_id|>' }}\n    {%- elif 'tool_calls' in message %}\n        {%- if not message.tool_calls|length == 1 %}\n            {{- raise_exception(\"This model only supports single tool-calls at once!\") }}\n        {%- endif %}\n        {%- set tool_call = message.tool_calls[0].function %}\n        {%- if builtin_tools is defined and tool_call.name in builtin_tools %}\n            {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' -}}\n            {{- \"<|python_tag|>\" + tool_call.name + \".call(\" }}\n            {%- for arg_name, arg_val in tool_call.arguments | items %}\n                {{- arg_name + '=\"' + arg_val + '\"' }}\n                {%- if not loop.last %}\n                    {{- \", \" }}\n                {%- endif %}\n                {%- endfor %}\n            {{- \")\" }}\n        {%- else  %}\n            {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' -}}\n            {{- '{\"name\": \"' + tool_call.name + '\", ' }}\n            {{- '\"parameters\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- \"}\" }}\n        {%- endif %}\n        {%- if builtin_tools is defined %}\n            {#- This means we're in ipython mode #}\n            {{- \"<|eom_id|>\" }}\n        {%- else %}\n            {{- \"<|eot_id|>\" }}\n        {%- endif %}\n    {%- elif message.role == \"tool\" or message.role == \"ipython\" %}\n        {{- \"<|start_header_id|>ipython<|end_header_id|>\\n\\n\" }}\n        {%- if message.content is mapping or message.content is iterable %}\n            {{- message.content | tojson }}\n        {%- else %}\n            {{- message.content }}\n        {%- endif %}\n        {{- \"<|eot_id|>\" }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|start_header_id|>assistant<|end_header_id|>\\n\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "571eddf08f7eb2aebfaeb85e094b68b1d79d90844d3afc3aab7755be67595642",
+      "chat_template_len": 4542,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "MaziyarPanahi/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "downloads": 69061,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 10,
+      "gguf_filenames_sample": [
+        "Meta-Llama-3.1-8B-Instruct.Q2_K.gguf",
+        "Meta-Llama-3.1-8B-Instruct.Q3_K_L.gguf",
+        "Meta-Llama-3.1-8B-Instruct.Q3_K_M.gguf",
+        "Meta-Llama-3.1-8B-Instruct.Q3_K_S.gguf",
+        "Meta-Llama-3.1-8B-Instruct.Q4_K_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}",
+      "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+      "chat_template_len": 348,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "brittlewis12/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "downloads": 879,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 24,
+      "gguf_filenames_sample": [
+        "meta-llama-3.1-8b-instruct.IQ1_M.gguf",
+        "meta-llama-3.1-8b-instruct.IQ1_S.gguf",
+        "meta-llama-3.1-8b-instruct.IQ2_M.gguf",
+        "meta-llama-3.1-8b-instruct.IQ2_S.gguf",
+        "meta-llama-3.1-8b-instruct.IQ2_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}",
+      "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+      "chat_template_len": 348,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "YorkieOH10/Meta-Llama-3.1-8B-Instruct-Q8_0-GGUF",
+      "downloads": 1138,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "meta-llama-3.1-8b-instruct-q8_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}",
+      "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+      "chat_template_len": 348,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "GPT4All-Community/Meta-Llama-3.1-8B-Instruct-128k-GGUF",
+      "downloads": 1197,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 2,
+      "gguf_filenames_sample": [
+        "Meta-Llama-3.1-8B-Instruct-128k-Q4_0.gguf",
+        "Meta-Llama-3.1-8B-Instruct-128k-f16.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}",
+      "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+      "chat_template_len": 348,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "ggml-org/Meta-Llama-3.1-8B-Instruct-Q4_0-GGUF",
+      "downloads": 2056,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "meta-llama-3.1-8b-instruct-q4_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}",
+      "chat_template_sha256": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+      "chat_template_len": 348,
+      "bos_token": "<|begin_of_text|>",
+      "eos_token": "<|eot_id|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Llama-3.1-8B-Instruct",
+      "repo_id": "ollama::llama3.1:8b",
+      "downloads": null,
+      "popularity_bucket": "official_registry",
+      "n_gguf_files": null,
+      "gguf_filenames_sample": [],
+      "source": "ollama_registry",
+      "chat_template": "{{- if or .System .Tools }}<|start_header_id|>system<|end_header_id|>\n{{- if .System }}\n\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\nCutting Knowledge Date: December 2023\n\nWhen you receive a tool call response, use the output to format an answer to the orginal user question.\n\nYou are a helpful assistant with tool calling capabilities.\n{{- end }}<|eot_id|>\n{{- end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 }}\n{{- if eq .Role \"user\" }}<|start_header_id|>user<|end_header_id|>\n{{- if and $.Tools $last }}\n\nGiven the following functions, please respond with a JSON for a function call with its proper arguments that best answers the given prompt.\n\nRespond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}. Do not use variables.\n\n{{ range $.Tools }}\n{{- . }}\n{{ end }}\nQuestion: {{ .Content }}<|eot_id|>\n{{- else }}\n\n{{ .Content }}<|eot_id|>\n{{- end }}{{ if $last }}<|start_header_id|>assistant<|end_header_id|>\n\n{{ end }}\n{{- else if eq .Role \"assistant\" }}<|start_header_id|>assistant<|end_header_id|>\n{{- if .ToolCalls }}\n{{ range .ToolCalls }}\n{\"name\": \"{{ .Function.Name }}\", \"parameters\": {{ .Function.Arguments }}}{{ end }}\n{{- else }}\n\n{{ .Content }}\n{{- end }}{{ if not $last }}<|eot_id|>{{ end }}\n{{- else if eq .Role \"tool\" }}<|start_header_id|>ipython<|end_header_id|>\n\n{{ .Content }}<|eot_id|>{{ if $last }}<|start_header_id|>assistant<|end_header_id|>\n\n{{ end }}\n{{- end }}\n{{- end }}",
+      "chat_template_sha256": "948af2743fc78a328dcb3b0f5a31b3d75f415840fdb699e8b1235978392ecf85",
+      "chat_template_len": 1481,
+      "params": "{\"stop\":[\"\\u003c|start_header_id|\\u003e\",\"\\u003c|end_header_id|\\u003e\",\"\\u003c|eot_id|\\u003e\"]}\n",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 74237,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 16,
+      "gguf_filenames_sample": [
+        "Mistral-7B-Instruct-v0.3.IQ1_M.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ1_S.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ2_XS.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ3_XS.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ4_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + eos_token}}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "chat_template_len": 470,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "lmstudio-community/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 15562,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 8,
+      "gguf_filenames_sample": [
+        "Mistral-7B-Instruct-v0.3-IQ3_M.gguf",
+        "Mistral-7B-Instruct-v0.3-IQ4_NL.gguf",
+        "Mistral-7B-Instruct-v0.3-Q3_K_L.gguf",
+        "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+        "Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + eos_token}}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "chat_template_len": 470,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "SanctumAI/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 13350,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 17,
+      "gguf_filenames_sample": [
+        "mistral-7b-instruct-v0.3.Q2_K.gguf",
+        "mistral-7b-instruct-v0.3.Q3_K_L.gguf",
+        "mistral-7b-instruct-v0.3.Q3_K_M.gguf",
+        "mistral-7b-instruct-v0.3.Q3_K_S.gguf",
+        "mistral-7b-instruct-v0.3.Q4_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + eos_token}}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "chat_template_len": 470,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "NonMiFrega/Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF",
+      "downloads": 86,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "mistral-7b-instruct-v0.3-q4_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = none %}\n{%- endif %}\n{%- set user_messages = loop_messages | selectattr(\"role\", \"equalto\", \"user\") | list %}\n\n{#- This block checks for alternating user/assistant messages, skipping tool calling messages #}\n{%- set ns = namespace() %}\n{%- set ns.index = 0 %}\n{%- for message in loop_messages %}\n    {%- if not (message.role == \"tool\" or message.role == \"tool_results\" or (message.tool_calls is defined and message.tool_calls is not none)) %}\n        {%- if (message[\"role\"] == \"user\") != (ns.index % 2 == 0) %}\n            {{- raise_exception(\"After the optional system message, conversation roles must alternate user/assistant/user/assistant/...\") }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{{- bos_token }}\n{%- for message in loop_messages %}\n    {%- if message[\"role\"] == \"user\" %}\n        {%- if tools is not none and (message == user_messages[-1]) %}\n            {{- \"[AVAILABLE_TOOLS] [\" }}\n            {%- for tool in tools %}\n                {%- set tool = tool.function %}\n                {{- '{\"type\": \"function\", \"function\": {' }}\n                {%- for key, val in tool.items() if key != \"return\" %}\n                    {%- if val is string %}\n                        {{- '\"' + key + '\": \"' + val + '\"' }}\n                    {%- else %}\n                        {{- '\"' + key + '\": ' + val|tojson }}\n                    {%- endif %}\n                    {%- if not loop.last %}\n                        {{- \", \" }}\n                    {%- endif %}\n                {%- endfor %}\n                {{- \"}}\" }}\n                {%- if not loop.last %}\n                    {{- \", \" }}\n                {%- else %}\n                    {{- \"]\" }}\n                {%- endif %}\n            {%- endfor %}\n            {{- \"[/AVAILABLE_TOOLS]\" }}\n            {%- endif %}\n        {%- if loop.last and system_message is defined %}\n            {{- \"[INST] \" + system_message + \"\\n\\n\" + message[\"content\"] + \"[/INST]\" }}\n        {%- else %}\n            {{- \"[INST] \" + message[\"content\"] + \"[/INST]\" }}\n        {%- endif %}\n    {%- elif message.tool_calls is defined and message.tool_calls is not none %}\n        {{- \"[TOOL_CALLS] [\" }}\n        {%- for tool_call in message.tool_calls %}\n            {%- set out = tool_call.function|tojson %}\n            {{- out[:-1] }}\n            {%- if not tool_call.id is defined or tool_call.id|length != 9 %}\n                {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n            {%- endif %}\n            {{- ', \"id\": \"' + tool_call.id + '\"}' }}\n            {%- if not loop.last %}\n                {{- \", \" }}\n            {%- else %}\n                {{- \"]\" + eos_token }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif message[\"role\"] == \"assistant\" %}\n        {{- \" \" + message[\"content\"]|trim + eos_token}}\n    {%- elif message[\"role\"] == \"tool_results\" or message[\"role\"] == \"tool\" %}\n        {%- if message.content is defined and message.content.content is defined %}\n            {%- set content = message.content.content %}\n        {%- else %}\n            {%- set content = message.content %}\n        {%- endif %}\n        {{- '[TOOL_RESULTS] {\"content\": ' + content|string + \", \" }}\n        {%- if not message.tool_call_id is defined or message.tool_call_id|length != 9 %}\n            {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n        {%- endif %}\n        {{- '\"call_id\": \"' + message.tool_call_id + '\"}[/TOOL_RESULTS]' }}\n    {%- else %}\n        {{- raise_exception(\"Only user and assistant roles are supported, with the exception of an initial optional system message!\") }}\n    {%- endif %}\n{%- endfor %}\n",
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "chat_template_len": 3959,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "minion1905/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 91,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 16,
+      "gguf_filenames_sample": [
+        "Mistral-7B-Instruct-v0.3.IQ1_M.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ1_S.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ2_XS.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ3_XS.gguf",
+        "Mistral-7B-Instruct-v0.3.IQ4_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + eos_token}}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "chat_template_len": 470,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "EnlistedGhost/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 95,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 7,
+      "gguf_filenames_sample": [
+        "Mistral-7B-Instruct-v0.3-BF16.gguf",
+        "Mistral-7B-Instruct-v0.3:Q2_K_SX.gguf",
+        "Mistral-7B-Instruct-v0.3:Q3_K_SX.gguf",
+        "Mistral-7B-Instruct-v0.3:Q4_K_SX.gguf",
+        "Mistral-7B-Instruct-v0.3:Q5_K_SX.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = none %}\n{%- endif %}\n{%- set user_messages = loop_messages | selectattr(\"role\", \"equalto\", \"user\") | list %}\n\n{#- This block checks for alternating user/assistant messages, skipping tool calling messages #}\n{%- set ns = namespace() %}\n{%- set ns.index = 0 %}\n{%- for message in loop_messages %}\n    {%- if not (message.role == \"tool\" or message.role == \"tool_results\" or (message.tool_calls is defined and message.tool_calls is not none)) %}\n        {%- if (message[\"role\"] == \"user\") != (ns.index % 2 == 0) %}\n            {{- raise_exception(\"After the optional system message, conversation roles must alternate user/assistant/user/assistant/...\") }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{{- bos_token }}\n{%- for message in loop_messages %}\n    {%- if message[\"role\"] == \"user\" %}\n        {%- if tools is not none and (message == user_messages[-1]) %}\n            {{- \"[AVAILABLE_TOOLS] [\" }}\n            {%- for tool in tools %}\n                {%- set tool = tool.function %}\n                {{- '{\"type\": \"function\", \"function\": {' }}\n                {%- for key, val in tool.items() if key != \"return\" %}\n                    {%- if val is string %}\n                        {{- '\"' + key + '\": \"' + val + '\"' }}\n                    {%- else %}\n                        {{- '\"' + key + '\": ' + val|tojson }}\n                    {%- endif %}\n                    {%- if not loop.last %}\n                        {{- \", \" }}\n                    {%- endif %}\n                {%- endfor %}\n                {{- \"}}\" }}\n                {%- if not loop.last %}\n                    {{- \", \" }}\n                {%- else %}\n                    {{- \"]\" }}\n                {%- endif %}\n            {%- endfor %}\n            {{- \"[/AVAILABLE_TOOLS]\" }}\n            {%- endif %}\n        {%- if loop.last and system_message is defined %}\n            {{- \"[INST] \" + system_message + \"\\n\\n\" + message[\"content\"] + \"[/INST]\" }}\n        {%- else %}\n            {{- \"[INST] \" + message[\"content\"] + \"[/INST]\" }}\n        {%- endif %}\n    {%- elif message.tool_calls is defined and message.tool_calls is not none %}\n        {{- \"[TOOL_CALLS] [\" }}\n        {%- for tool_call in message.tool_calls %}\n            {%- set out = tool_call.function|tojson %}\n            {{- out[:-1] }}\n            {%- if not tool_call.id is defined or tool_call.id|length != 9 %}\n                {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n            {%- endif %}\n            {{- ', \"id\": \"' + tool_call.id + '\"}' }}\n            {%- if not loop.last %}\n                {{- \", \" }}\n            {%- else %}\n                {{- \"]\" + eos_token }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif message[\"role\"] == \"assistant\" %}\n        {{- \" \" + message[\"content\"]|trim + eos_token}}\n    {%- elif message[\"role\"] == \"tool_results\" or message[\"role\"] == \"tool\" %}\n        {%- if message.content is defined and message.content.content is defined %}\n            {%- set content = message.content.content %}\n        {%- else %}\n            {%- set content = message.content %}\n        {%- endif %}\n        {{- '[TOOL_RESULTS] {\"content\": ' + content|string + \", \" }}\n        {%- if not message.tool_call_id is defined or message.tool_call_id|length != 9 %}\n            {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n        {%- endif %}\n        {{- '\"call_id\": \"' + message.tool_call_id + '\"}[/TOOL_RESULTS]' }}\n    {%- else %}\n        {{- raise_exception(\"Only user and assistant roles are supported, with the exception of an initial optional system message!\") }}\n    {%- endif %}\n{%- endfor %}\n",
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "chat_template_len": 3959,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "tokoin/Mistral-7B-Instruct-v0.3-Q5_0-GGUF",
+      "downloads": 106,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "mistral-7b-instruct-v0.3-q5_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = none %}\n{%- endif %}\n{%- set user_messages = loop_messages | selectattr(\"role\", \"equalto\", \"user\") | list %}\n\n{#- This block checks for alternating user/assistant messages, skipping tool calling messages #}\n{%- set ns = namespace() %}\n{%- set ns.index = 0 %}\n{%- for message in loop_messages %}\n    {%- if not (message.role == \"tool\" or message.role == \"tool_results\" or (message.tool_calls is defined and message.tool_calls is not none)) %}\n        {%- if (message[\"role\"] == \"user\") != (ns.index % 2 == 0) %}\n            {{- raise_exception(\"After the optional system message, conversation roles must alternate user/assistant/user/assistant/...\") }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{{- bos_token }}\n{%- for message in loop_messages %}\n    {%- if message[\"role\"] == \"user\" %}\n        {%- if tools is not none and (message == user_messages[-1]) %}\n            {{- \"[AVAILABLE_TOOLS] [\" }}\n            {%- for tool in tools %}\n                {%- set tool = tool.function %}\n                {{- '{\"type\": \"function\", \"function\": {' }}\n                {%- for key, val in tool.items() if key != \"return\" %}\n                    {%- if val is string %}\n                        {{- '\"' + key + '\": \"' + val + '\"' }}\n                    {%- else %}\n                        {{- '\"' + key + '\": ' + val|tojson }}\n                    {%- endif %}\n                    {%- if not loop.last %}\n                        {{- \", \" }}\n                    {%- endif %}\n                {%- endfor %}\n                {{- \"}}\" }}\n                {%- if not loop.last %}\n                    {{- \", \" }}\n                {%- else %}\n                    {{- \"]\" }}\n                {%- endif %}\n            {%- endfor %}\n            {{- \"[/AVAILABLE_TOOLS]\" }}\n            {%- endif %}\n        {%- if loop.last and system_message is defined %}\n            {{- \"[INST] \" + system_message + \"\\n\\n\" + message[\"content\"] + \"[/INST]\" }}\n        {%- else %}\n            {{- \"[INST] \" + message[\"content\"] + \"[/INST]\" }}\n        {%- endif %}\n    {%- elif message.tool_calls is defined and message.tool_calls is not none %}\n        {{- \"[TOOL_CALLS] [\" }}\n        {%- for tool_call in message.tool_calls %}\n            {%- set out = tool_call.function|tojson %}\n            {{- out[:-1] }}\n            {%- if not tool_call.id is defined or tool_call.id|length != 9 %}\n                {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n            {%- endif %}\n            {{- ', \"id\": \"' + tool_call.id + '\"}' }}\n            {%- if not loop.last %}\n                {{- \", \" }}\n            {%- else %}\n                {{- \"]\" + eos_token }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif message[\"role\"] == \"assistant\" %}\n        {{- \" \" + message[\"content\"]|trim + eos_token}}\n    {%- elif message[\"role\"] == \"tool_results\" or message[\"role\"] == \"tool\" %}\n        {%- if message.content is defined and message.content.content is defined %}\n            {%- set content = message.content.content %}\n        {%- else %}\n            {%- set content = message.content %}\n        {%- endif %}\n        {{- '[TOOL_RESULTS] {\"content\": ' + content|string + \", \" }}\n        {%- if not message.tool_call_id is defined or message.tool_call_id|length != 9 %}\n            {{- raise_exception(\"Tool call IDs should be alphanumeric strings with length 9!\") }}\n        {%- endif %}\n        {{- '\"call_id\": \"' + message.tool_call_id + '\"}[/TOOL_RESULTS]' }}\n    {%- else %}\n        {{- raise_exception(\"Only user and assistant roles are supported, with the exception of an initial optional system message!\") }}\n    {%- endif %}\n{%- endfor %}\n",
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "chat_template_len": 3959,
+      "bos_token": "<s>",
+      "eos_token": "</s>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "ollama::mistral:7b",
+      "downloads": null,
+      "popularity_bucket": "official_registry",
+      "n_gguf_files": null,
+      "gguf_filenames_sample": [],
+      "source": "ollama_registry",
+      "chat_template": "{{- if .Messages }}\n{{- range $index, $_ := .Messages }}\n{{- if eq .Role \"user\" }}\n{{- if and (eq (len (slice $.Messages $index)) 1) $.Tools }}[AVAILABLE_TOOLS] {{ $.Tools }}[/AVAILABLE_TOOLS]\n{{- end }}[INST] {{ if and $.System (eq (len (slice $.Messages $index)) 1) }}{{ $.System }}\n\n{{ end }}{{ .Content }}[/INST]\n{{- else if eq .Role \"assistant\" }}\n{{- if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}[TOOL_CALLS] [\n{{- range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{- end }}]\n{{- end }}</s>\n{{- else if eq .Role \"tool\" }}[TOOL_RESULTS] {\"content\": {{ .Content }}} [/TOOL_RESULTS]\n{{- end }}\n{{- end }}\n{{- else }}[INST] {{ if .System }}{{ .System }}\n\n{{ end }}{{ .Prompt }}[/INST]\n{{- end }}{{ .Response }}\n{{- if .Response }}</s>\n{{- end }}",
+      "chat_template_sha256": "1ff5b64b61b9a63146475a24f70d3ca2fd6fdeec44247987163479968896fc0b",
+      "chat_template_len": 799,
+      "params": "{\"stop\":[\"[INST]\",\"[/INST]\"]}\n",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 125936,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 24,
+      "gguf_filenames_sample": [
+        "Qwen2.5-7B-Instruct-IQ2_M.gguf",
+        "Qwen2.5-7B-Instruct-IQ3_M.gguf",
+        "Qwen2.5-7B-Instruct-IQ3_XS.gguf",
+        "Qwen2.5-7B-Instruct-IQ4_XS.gguf",
+        "Qwen2.5-7B-Instruct-Q2_K.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "chat_template_len": 2507,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 82380,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 19,
+      "gguf_filenames_sample": [
+        "qwen2.5-7b-instruct-fp16-00001-of-00004.gguf",
+        "qwen2.5-7b-instruct-fp16-00002-of-00004.gguf",
+        "qwen2.5-7b-instruct-fp16-00003-of-00004.gguf",
+        "qwen2.5-7b-instruct-fp16-00004-of-00004.gguf",
+        "qwen2.5-7b-instruct-q2_k.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "chat_template_len": 2509,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 66231,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 16,
+      "gguf_filenames_sample": [
+        "Qwen2.5-7B-Instruct.IQ1_M.gguf",
+        "Qwen2.5-7B-Instruct.IQ1_S.gguf",
+        "Qwen2.5-7B-Instruct.IQ2_XS.gguf",
+        "Qwen2.5-7B-Instruct.IQ3_XS.gguf",
+        "Qwen2.5-7B-Instruct.IQ4_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "chat_template_len": 2509,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Qwen2.5-7B-Instruct-i1-GGUF",
+      "downloads": 1834,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 29,
+      "gguf_filenames_sample": [
+        "Qwen2.5-7B-Instruct.i1-IQ1_M.gguf",
+        "Qwen2.5-7B-Instruct.i1-IQ1_S.gguf",
+        "Qwen2.5-7B-Instruct.i1-IQ2_M.gguf",
+        "Qwen2.5-7B-Instruct.i1-IQ2_S.gguf",
+        "Qwen2.5-7B-Instruct.i1-IQ2_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "chat_template_len": 2507,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "idasummer/Qwen2.5-7B-Instruct-Q5_K_M-GGUF",
+      "downloads": 2902,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "qwen2.5-7b-instruct-q5_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "chat_template_len": 2507,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "paultimothymooney/Qwen2.5-7B-Instruct-Q4_K_M-GGUF",
+      "downloads": 6387,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "qwen2.5-7b-instruct-q4_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "chat_template_len": 2509,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 23481,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 4,
+      "gguf_filenames_sample": [
+        "Qwen2.5-7B-Instruct-Q3_K_L.gguf",
+        "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+        "Qwen2.5-7B-Instruct-Q6_K.gguf",
+        "Qwen2.5-7B-Instruct-Q8_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "chat_template_len": 2507,
+      "bos_token": "<|endoftext|>",
+      "eos_token": "<|im_end|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Qwen2.5-7B-Instruct",
+      "repo_id": "ollama::qwen2.5:7b",
+      "downloads": null,
+      "popularity_bucket": "official_registry",
+      "n_gguf_files": null,
+      "gguf_filenames_sample": [],
+      "source": "ollama_registry",
+      "chat_template": "{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}",
+      "chat_template_sha256": "eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+      "chat_template_len": 1482,
+      "params": null,
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "bartowski/gemma-2-9b-it-GGUF",
+      "downloads": 21640,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 29,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it-IQ2_M.gguf",
+        "gemma-2-9b-it-IQ2_S.gguf",
+        "gemma-2-9b-it-IQ2_XS.gguf",
+        "gemma-2-9b-it-IQ3_M.gguf",
+        "gemma-2-9b-it-IQ3_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "SanctumAI/gemma-2-9b-it-GGUF",
+      "downloads": 17643,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 17,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it.Q2_K.gguf",
+        "gemma-2-9b-it.Q3_K_L.gguf",
+        "gemma-2-9b-it.Q3_K_M.gguf",
+        "gemma-2-9b-it.Q3_K_S.gguf",
+        "gemma-2-9b-it.Q4_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "lmstudio-community/gemma-2-9b-it-GGUF",
+      "downloads": 8099,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 6,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it-IQ4_XS.gguf",
+        "gemma-2-9b-it-Q3_K_L.gguf",
+        "gemma-2-9b-it-Q4_K_M.gguf",
+        "gemma-2-9b-it-Q5_K_M.gguf",
+        "gemma-2-9b-it-Q6_K.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "mradermacher/gemma-2-9b-it-i1-GGUF",
+      "downloads": 368,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 21,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it.i1-IQ1_M.gguf",
+        "gemma-2-9b-it.i1-IQ1_S.gguf",
+        "gemma-2-9b-it.i1-IQ2_M.gguf",
+        "gemma-2-9b-it.i1-IQ2_S.gguf",
+        "gemma-2-9b-it.i1-IQ2_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "second-state/gemma-2-9b-it-GGUF",
+      "downloads": 504,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 13,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it-Q2_K.gguf",
+        "gemma-2-9b-it-Q3_K_L.gguf",
+        "gemma-2-9b-it-Q3_K_M.gguf",
+        "gemma-2-9b-it-Q3_K_S.gguf",
+        "gemma-2-9b-it-Q4_0.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "qwp4w3hyb/gemma-2-9b-it-iMat-GGUF",
+      "downloads": 687,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 9,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it-bf16.gguf",
+        "gemma-2-9b-it-imat-IQ1_S.gguf",
+        "gemma-2-9b-it-imat-IQ2_XXS.gguf",
+        "gemma-2-9b-it-imat-IQ3_XXS.gguf",
+        "gemma-2-9b-it-imat-IQ4_XS.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "zhezhe/gemma-2-9b-it-Q4_K_M-GGUF",
+      "downloads": 717,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "gemma-2-9b-it-q4_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "chat_template_sha256": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+      "chat_template_len": 591,
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "gemma-2-9b-it",
+      "repo_id": "ollama::gemma2:9b",
+      "downloads": null,
+      "popularity_bucket": "official_registry",
+      "n_gguf_files": null,
+      "gguf_filenames_sample": [],
+      "source": "ollama_registry",
+      "chat_template": "<start_of_turn>user\n{{ if .System }}{{ .System }} {{ end }}{{ .Prompt }}<end_of_turn>\n<start_of_turn>model\n{{ .Response }}<end_of_turn>\n",
+      "chat_template_sha256": "109037bec39c0becc8221222ae23557559bc594290945a2c4221ab4f303b8871",
+      "chat_template_len": 136,
+      "params": "{\"stop\":[\"\\u003cstart_of_turn\\u003e\",\"\\u003cend_of_turn\\u003e\"]}\n",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3.1-mini-4k-instruct-GGUF",
+      "downloads": 2318,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 20,
+      "gguf_filenames_sample": [
+        "Phi-3.1-mini-4k-instruct-IQ2_M.gguf",
+        "Phi-3.1-mini-4k-instruct-IQ3_M.gguf",
+        "Phi-3.1-mini-4k-instruct-IQ3_XS.gguf",
+        "Phi-3.1-mini-4k-instruct-IQ4_XS.gguf",
+        "Phi-3.1-mini-4k-instruct-Q2_K.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "lmstudio-community/Phi-3.1-mini-4k-instruct-GGUF",
+      "downloads": 2163,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 7,
+      "gguf_filenames_sample": [
+        "Phi-3.1-mini-4k-instruct-IQ3_M.gguf",
+        "Phi-3.1-mini-4k-instruct-IQ4_XS.gguf",
+        "Phi-3.1-mini-4k-instruct-Q3_K_L.gguf",
+        "Phi-3.1-mini-4k-instruct-Q4_K_M.gguf",
+        "Phi-3.1-mini-4k-instruct-Q5_K_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "legraphista/Phi-3-mini-4k-instruct-update2024_07_03-IMat-GGUF",
+      "downloads": 1622,
+      "popularity_bucket": "high_popularity",
+      "n_gguf_files": 25,
+      "gguf_filenames_sample": [
+        "Phi-3-mini-4k-instruct.BF16.gguf",
+        "Phi-3-mini-4k-instruct.FP16.gguf",
+        "Phi-3-mini-4k-instruct.IQ1_M.gguf",
+        "Phi-3-mini-4k-instruct.IQ1_S.gguf",
+        "Phi-3-mini-4k-instruct.IQ2_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "alal123/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+      "downloads": 154,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "phi-3-mini-4k-instruct-q4_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "edsoncarvalhointuria/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+      "downloads": 163,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 1,
+      "gguf_filenames_sample": [
+        "phi-3-mini-4k-instruct-q4_k_m.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "tensorblock/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 166,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 2,
+      "gguf_filenames_sample": [
+        "Phi-3-mini-4k-instruct-Q2_K.gguf",
+        "Phi-3-mini-4k-instruct-Q3_K_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "DhruvalLabs/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 180,
+      "popularity_bucket": "long_tail",
+      "n_gguf_files": 10,
+      "gguf_filenames_sample": [
+        "Phi-3-mini-4k-instruct-Q2_K.gguf",
+        "Phi-3-mini-4k-instruct-Q3_K_L.gguf",
+        "Phi-3-mini-4k-instruct-Q3_K_M.gguf",
+        "Phi-3-mini-4k-instruct-Q3_K_S.gguf",
+        "Phi-3-mini-4k-instruct-Q4_K_M.gguf"
+      ],
+      "source": "hf_repo_level",
+      "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'user' %}{{'<|user|>\n' + message['content'] + '<|end|>\n'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>\n' + message['content'] + '<|end|>\n'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>\n' }}{% else %}{{ eos_token }}{% endif %}",
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "chat_template_len": 407,
+      "bos_token": "<s>",
+      "eos_token": "<|endoftext|>",
+      "fetch_ok": true,
+      "fetch_error": null
+    },
+    {
+      "anchor_model": "Phi-3-mini-4k-instruct",
+      "repo_id": "ollama::phi3:3.8b",
+      "downloads": null,
+      "popularity_bucket": "official_registry",
+      "n_gguf_files": null,
+      "gguf_filenames_sample": [],
+      "source": "ollama_registry",
+      "chat_template": "{{ if .System }}<|system|>\n{{ .System }}<|end|>\n{{ end }}{{ if .Prompt }}<|user|>\n{{ .Prompt }}<|end|>\n{{ end }}<|assistant|>\n{{ .Response }}<|end|>",
+      "chat_template_sha256": "542b217f179c7825eeb5bca3c77d2b75ed05bafbd3451d9188891a60a85337c6",
+      "chat_template_len": 148,
+      "params": "{\"stop\":[\"\\u003c|end|\\u003e\",\"\\u003c|user|\\u003e\",\"\\u003c|assistant|\\u003e\"]}\n",
+      "fetch_ok": true,
+      "fetch_error": null
+    }
+  ],
+  "summary_by_anchor": {
+    "Llama-3.1-8B-Instruct": {
+      "n_hf_entries_ok": 7,
+      "n_hf_distinct_templates": 3,
+      "hf_divergence_detected": true,
+      "n_ollama_entries_ok": 1,
+      "hf_repo_hashes": {
+        "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+        "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF": "571eddf08f7eb2aebfaeb85e094b68b1d79d90844d3afc3aab7755be67595642",
+        "MaziyarPanahi/Meta-Llama-3.1-8B-Instruct-GGUF": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+        "brittlewis12/Meta-Llama-3.1-8B-Instruct-GGUF": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+        "YorkieOH10/Meta-Llama-3.1-8B-Instruct-Q8_0-GGUF": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+        "GPT4All-Community/Meta-Llama-3.1-8B-Instruct-128k-GGUF": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2",
+        "ggml-org/Meta-Llama-3.1-8B-Instruct-Q4_0-GGUF": "b48c47f6443892716176eb200bf4ef108f64e06ca26ed0fa8ebc0a4b3992fcb2"
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "n_hf_entries_ok": 7,
+      "n_hf_distinct_templates": 2,
+      "hf_divergence_detected": true,
+      "n_ollama_entries_ok": 1,
+      "hf_repo_hashes": {
+        "MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+        "lmstudio-community/Mistral-7B-Instruct-v0.3-GGUF": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+        "SanctumAI/Mistral-7B-Instruct-v0.3-GGUF": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+        "NonMiFrega/Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+        "minion1905/Mistral-7B-Instruct-v0.3-GGUF": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+        "EnlistedGhost/Mistral-7B-Instruct-v0.3-GGUF": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+        "tokoin/Mistral-7B-Instruct-v0.3-Q5_0-GGUF": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826"
+      }
+    },
+    "Qwen2.5-7B-Instruct": {
+      "n_hf_entries_ok": 7,
+      "n_hf_distinct_templates": 2,
+      "hf_divergence_detected": true,
+      "n_ollama_entries_ok": 1,
+      "hf_repo_hashes": {
+        "bartowski/Qwen2.5-7B-Instruct-GGUF": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "Qwen/Qwen2.5-7B-Instruct-GGUF": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+        "MaziyarPanahi/Qwen2.5-7B-Instruct-GGUF": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+        "mradermacher/Qwen2.5-7B-Instruct-i1-GGUF": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "idasummer/Qwen2.5-7B-Instruct-Q5_K_M-GGUF": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "paultimothymooney/Qwen2.5-7B-Instruct-Q4_K_M-GGUF": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+        "lmstudio-community/Qwen2.5-7B-Instruct-GGUF": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+      }
+    },
+    "gemma-2-9b-it": {
+      "n_hf_entries_ok": 7,
+      "n_hf_distinct_templates": 1,
+      "hf_divergence_detected": false,
+      "n_ollama_entries_ok": 1,
+      "hf_repo_hashes": {
+        "bartowski/gemma-2-9b-it-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "SanctumAI/gemma-2-9b-it-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "lmstudio-community/gemma-2-9b-it-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "mradermacher/gemma-2-9b-it-i1-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "second-state/gemma-2-9b-it-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "qwp4w3hyb/gemma-2-9b-it-iMat-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6",
+        "zhezhe/gemma-2-9b-it-Q4_K_M-GGUF": "ecd6ae513fe103f0eb62e8ab5bfa8d0fe45c1074fa398b089c93a7e70c15cfd6"
+      }
+    },
+    "Phi-3-mini-4k-instruct": {
+      "n_hf_entries_ok": 7,
+      "n_hf_distinct_templates": 1,
+      "hf_divergence_detected": false,
+      "n_ollama_entries_ok": 1,
+      "hf_repo_hashes": {
+        "bartowski/Phi-3.1-mini-4k-instruct-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "lmstudio-community/Phi-3.1-mini-4k-instruct-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "legraphista/Phi-3-mini-4k-instruct-update2024_07_03-IMat-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "alal123/Phi-3-mini-4k-instruct-Q4_K_M-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "edsoncarvalhointuria/Phi-3-mini-4k-instruct-Q4_K_M-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "tensorblock/Phi-3-mini-4k-instruct-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+        "DhruvalLabs/Phi-3-mini-4k-instruct-GGUF": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa"
+      }
+    }
+  }
+}

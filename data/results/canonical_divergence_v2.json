@@ -1,0 +1,60 @@
+{
+  "canonical_deviation_overall_gold_standard_only": {
+    "anchors_included": [
+      "Mistral-7B-Instruct-v0.3",
+      "Qwen2.5-7B-Instruct",
+      "Phi-3-mini-4k-instruct"
+    ],
+    "total_repos": 87,
+    "total_diverging_from_canonical": 30,
+    "pct": 34.5
+  },
+  "by_anchor": {
+    "Mistral-7B-Instruct-v0.3": {
+      "status": "gold_standard_canonical",
+      "canonical_repo": "mistralai/Mistral-7B-Instruct-v0.3",
+      "n_repos": 35,
+      "n_diverge_from_canonical": 18,
+      "pct_diverge_from_canonical": 51.4,
+      "modal_matches_canonical": true,
+      "n_diverge_from_modal": 18,
+      "pct_diverge_from_modal": 51.4
+    },
+    "Qwen2.5-7B-Instruct": {
+      "status": "gold_standard_canonical",
+      "canonical_repo": "Qwen/Qwen2.5-7B-Instruct",
+      "n_repos": 17,
+      "n_diverge_from_canonical": 4,
+      "pct_diverge_from_canonical": 23.5,
+      "modal_matches_canonical": true,
+      "n_diverge_from_modal": 4,
+      "pct_diverge_from_modal": 23.5
+    },
+    "Phi-3-mini-4k-instruct": {
+      "status": "gold_standard_canonical",
+      "canonical_repo": "microsoft/Phi-3-mini-4k-instruct",
+      "n_repos": 35,
+      "n_diverge_from_canonical": 8,
+      "pct_diverge_from_canonical": 22.9,
+      "modal_matches_canonical": true,
+      "n_diverge_from_modal": 8,
+      "pct_diverge_from_modal": 22.9
+    },
+    "Llama-3.1-8B-Instruct": {
+      "status": "GATED_no_canonical_available",
+      "canonical_repo": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "note": "tokenizer_config.json returns HTTP 401 without an authenticated, license-accepting HF account. Not measured. Reporting modal-disagreement ONLY -- this is NOT a canonical-deviation number and must not be presented as one.",
+      "n_repos": 29,
+      "n_diverge_from_modal": 13,
+      "pct_diverge_from_modal": 44.8
+    },
+    "gemma-2-9b-it": {
+      "status": "GATED_no_canonical_available",
+      "canonical_repo": "google/gemma-2-9b-it",
+      "note": "tokenizer_config.json returns HTTP 401 without an authenticated, license-accepting HF account. Not measured. Reporting modal-disagreement ONLY -- this is NOT a canonical-deviation number and must not be presented as one.",
+      "n_repos": 27,
+      "n_diverge_from_modal": 3,
+      "pct_diverge_from_modal": 11.1
+    }
+  }
+}

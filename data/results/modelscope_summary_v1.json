@@ -1,0 +1,17 @@
+{
+  "Mistral-7B-Instruct-v0.3": {
+    "n": 14,
+    "diverge": 10,
+    "pct": 71.4
+  },
+  "Qwen2.5-7B-Instruct": {
+    "n": 18,
+    "diverge": 8,
+    "pct": 44.4
+  },
+  "Phi-3-mini-4k-instruct": {
+    "n": 16,
+    "diverge": 11,
+    "pct": 68.8
+  }
+}

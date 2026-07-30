@@ -1,0 +1,924 @@
+{
+  "source": "modelscope.cn",
+  "purpose": "external-validity check against the primary Hugging Face corpus (Section 5.1-5.2)",
+  "corpus": [
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "bartowski/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 1763,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "LLM-Research/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 701,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "rubraAI/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 324,
+      "chat_template_sha256": "2d33e1c667be06de6207f25e215889d045e8dead508bbb1980169361283e79df",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "noctrex/Mistral-7B-Instruct-v0.3-BF16-GGUF",
+      "downloads": 98,
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "QuantFactory/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 2286,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "second-state/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 1995,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "PrunaAI/Mistral-7B-Instruct-v0.3-GGUF-smashed",
+      "downloads": 57,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "DevQuasar/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 165,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 184,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "Mungert/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 209,
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "lmstudio-community/Mistral-7B-Instruct-v0.3-GGUF",
+      "downloads": 1122,
+      "chat_template_sha256": "26a59556925c987317ce5291811ba3b7f32ec4c647c400c6cc7e3a9993007ba7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "newsletter/Mistral-7B-Instruct-v0.3-Q6_K-GGUF",
+      "downloads": 423,
+      "chat_template_sha256": "6915a233b68427506bfa4b5831b50ccc017b5fe7b30260740a069352298ff597",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "newsletter/Mistral-7B-Instruct-v0.3-Q8_0-GGUF",
+      "downloads": 413,
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "DevQuasar/Mistral-7B-Instruct-v0.3_brainstorm-v3.1-GGUF",
+      "downloads": 192,
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 98931,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "okwinds/Qwen2.5-7B-Instruct-GGUF-V3-LOT",
+      "downloads": 1288,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 1859,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 2385,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Mungert/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 190,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "OllmOne/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 153,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "second-state/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 530,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "AtomicChat/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 11,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Qwen2.5-7B-Instruct-131K-i1-GGUF",
+      "downloads": 38,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-kowiki-qa-GGUF",
+      "downloads": 1989,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 3238,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "tttttx/qwen2.5-7b-instruct-q8_0-gguf",
+      "downloads": 79,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Qwen2.5-7B-Instruct_openthoughts3_300k_annotated_Qwen3-32B-i1-GGUF",
+      "downloads": 143,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "tttttx/qwen2.5-7b-instruct-fp16-gguf",
+      "downloads": 127,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 72,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "neilpeng/Qwen2.5-7B-Instruct-sft-cad-full-q4k.gguf",
+      "downloads": 29,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bullerwins/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 222,
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "tttttx/Qwen2.5-7B-Instruct-GGUF",
+      "downloads": 5,
+      "chat_template_sha256": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "microsoft/Phi-3-mini-4k-instruct-gguf",
+      "downloads": 789,
+      "chat_template_sha256": "268b6082ceb7176dc6ed80557a2f7837f9f0339592fbee677d405a553af15f88",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "backyardai/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 180,
+      "chat_template_sha256": "268b6082ceb7176dc6ed80557a2f7837f9f0339592fbee677d405a553af15f88",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "PrunaAI/Phi-3-mini-4k-instruct-GGUF-Imatrix-smashed",
+      "downloads": 73,
+      "chat_template_sha256": "68e5b97472ceec7523b68d3678958db46f568999a43221ae354a6ba0bcf0a611",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "OllmOne/Phi-3-mini-4k-instruct-gguf",
+      "downloads": 643,
+      "chat_template_sha256": "68e5b97472ceec7523b68d3678958db46f568999a43221ae354a6ba0bcf0a611",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "sangsq/Phi-3-mini-4k-instruct-gguf",
+      "downloads": 39,
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "cix/Phi-3-mini-4k-instruct-gguf",
+      "downloads": 4,
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 1202,
+      "chat_template_sha256": "41ffe9d71dd7c9017d76d8a4e527f093407c514093e087f1cf87faefc5e771ad",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "second-state/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 1975,
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF-v2",
+      "downloads": 2171,
+      "chat_template_sha256": "268b6082ceb7176dc6ed80557a2f7837f9f0339592fbee677d405a553af15f88",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 2162,
+      "chat_template_sha256": "b0e53f5e7bae6fdb93013abeceef343e8841cce87def2601e7269a53439b5740",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF-imatrix",
+      "downloads": 2114,
+      "chat_template_sha256": "268b6082ceb7176dc6ed80557a2f7837f9f0339592fbee677d405a553af15f88",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF-v3",
+      "downloads": 2156,
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "diverges_from_canonical": false
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-Matter-0.1-Slim-A-GGUF",
+      "downloads": 2155,
+      "chat_template_sha256": "86ed4e17f8598dd2b93de010c9fc84a9ddcf1f36a1e6bcf95d6143a80e78b4fc",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3-mini-4k-instruct-v0.3-GGUF",
+      "downloads": 987,
+      "chat_template_sha256": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3-mini-4k-instruct-old-GGUF",
+      "downloads": 867,
+      "chat_template_sha256": "b0e53f5e7bae6fdb93013abeceef343e8841cce87def2601e7269a53439b5740",
+      "diverges_from_canonical": true
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "MaziyarPanahi/Phi-3-mini-4k-instruct-GGUF",
+      "downloads": 49,
+      "chat_template_sha256": "dcaee66df77bfbb789ec541fe713218da30225a526f1db97138fc39ee6dc56aa",
+      "diverges_from_canonical": false
+    }
+  ],
+  "excluded": [
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Synatra-7B-v0.3-RP-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Mistral-7B-KNUT-v0.3-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Mistral-7B-KNUT-v0.3-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Synatra-7B-v0.3-dpo-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/blossom-v3_1-mistral-7b-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-1-dare-0.85-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/openchat_3.5-16k-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/MetaMath-OpenHermes-2.5-neural-chat-v3-3-Slerp-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/openchat-3.5-0106-Mistral-7B-Instruct-v0.2-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/MetaMath-OpenHermes-2.5-neural-chat-v3-3-Slerp-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/OpenHermes-2.5-neural-chat-7b-v3-1-7B-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/OpenHermes-2.5-neural-chat-7b-v3-2-7B-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/OpenHermes-2.5-neural-chat-7b-v3-1-7B-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/OpenHermes-2.5-neural-chat-v3-3-Slerp-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Tess-XS-v1-3-yarn-128K-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-3-Slerp-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/una-cybertron-7b-v3-OMA-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/Tess-XS-v1-3-yarn-128K-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/blossom-v3-mistral-7b-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/blossom-v3-mistral-7b-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-2-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/airoboros-m-7b-3.1.2-dare-0.85-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/blossom-v3_1-mistral-7b-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "MaziyarPanahi/neural-chat-7b-v3-1-dare-0.85-Mistral-7B-Instruct-v0.1-GGUF",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Mistral-7B-Instruct-v0.3",
+      "repo_id": "bartowski/Mistral-7B-Instruct-v0.3-exl2",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "unsloth/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ngxson/Qwen2.5-7B-Instruct-1M-Q4_K_M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "okwinds/Qwen2.5-Coder-7B-Instruct-GGUF-V3-LOT",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen_Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "IAILabs/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Josiefied-Qwen2.5-7B-Instruct-abliterated-i1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "unsloth/Qwen2.5-Coder-7B-Instruct-128K-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "unsloth/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "modelscope/Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Mungert/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/unsloth-Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "swift/MS-LongWriter-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "prithivMLmods/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "damotestx/test_split_Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QwenCollection/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Meissa-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "IAILabs/Qwen2.5-VL-7B-Instruct-GGUF-WIP",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "dengcao/Qwen2.5-VL-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "PrunaAI/AIFunOver-Qwen2.5-7B-Instruct-1M-openvino-fp16-GGUF-smashed",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "apepkuss/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "RealmSky/Qwen2.5-7B-Instruct-GGUF",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Manojb/qwen2.5-coder-7b-instruct-q6_k.gguf",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-Coder-7B-Chat-Instruct-TIES-v1.2-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Mungert/Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/FuseChat-Qwen-2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:1m"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/Orion-zhen-Meissa-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/LoRA-Deepthink-Reasoning-Qwen2.5-7B-Instruct-Q8_0-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/mdobbali-Qwen2.5-7B-Instruct-131K-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/LoRA-Human-Like-Qwen2.5-7B-Instruct-F16-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Human-Like-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "second-state/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Manojb/qwen2.5-coder-7b-instruct-fp16.gguf",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/Qwen2.5-Coder-7B-Instruct-Q8_0-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.0-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Manojb/qwen2.5-coder-7b-instruct-q8_0.gguf",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-7B-Instruct-1M-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "cwrl520/Qwen2.5-7B-Instruct-pro-GGUF",
+      "reason": "no_chat_template_in_response"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "lmstudio-community/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/C10X-LongWriter-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/mlx-community-Qwen2.5-7B-Instruct-bf16-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "featherless-ai-quants/unsloth-Qwen2.5-Math-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.2-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "RealmSky/Qwen2.5-7B-Instruct-GGUF-test1",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Qwen2.5-Osiris-7B-Instruct-i1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/LoRA-Qwen2.5-Coder-7B-Instruct-F16-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/FuseCyberMix-Qwen-2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-MathCoder-GGUF",
+      "reason": "variant_mismatch:coder"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "second-state/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-Math-7B-Instruct-SocraticLM-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "tttttx/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Humanish-Qwen2.5-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "ggml-org/LoRA-Qwerus-Qwen2.5-7B-Instruct-F16-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "DevQuasar/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "MaziyarPanahi/Qwen2.5-Coder-7B-Instruct-20241106-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "PrunaAI/ReadyArt-Qwen2.5-7B-Instruct-1M_EXL2_4.0bpw_H8-GGUF-smashed",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Minton/qwen2.5-7b-news-summary-Instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "mradermacher/Amadeus-Verbo-FI-Qwen2.5-7B-PT-BR-Instruct-i1-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "Embedding-GGUF/gte-Qwen2-7B-instruct-Q5_K_M-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "xhd0728/qwen2.5-7b-structrag-router-q8_0.gguf",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-7B-Instruct-1M-exl2",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-Coder-7B-Instruct-exl2",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Qwen2.5-7B-Instruct",
+      "repo_id": "bartowski/Qwen2.5-7B-Instruct-exl2",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "AI-ModelScope/Phi-3.1-mini-4k-instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3.1-mini-4k-instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "Josephgflowers/Phi-3-mini-4k-instruct-Cinder-llamafied-with-16bit-GGUF",
+      "reason": "no_chat_template_in_response"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "lmstudio-community/Phi-3.1-mini-4k-instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "PrunaAI/microsoft-Phi-3-mini-4k-instruct-GGUF-smashed",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "Josephgflowers/Phi-3-mini-4k-instruct-Cinder-with-16bit-GGUF",
+      "reason": "no_chat_template_in_response"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "MaziyarPanahi/Phi-3-mini-4K-instruct-cpo-simpo-GGUF",
+      "reason": "finetune_keyword:simpo"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "RealmSky/Phi-3.1-mini-4k-instruct-GGUF",
+      "reason": "variant_mismatch:name_does_not_start_with_anchor"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3.1-mini-4k-instruct-exl2",
+      "reason": "not_gguf_library"
+    },
+    {
+      "anchor": "Phi-3-mini-4k-instruct",
+      "repo_id": "bartowski/Phi-3-mini-4k-instruct-exl2",
+      "reason": "not_gguf_library"
+    }
+  ]
+}

@@ -1,0 +1,4664 @@
+[
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mmnga/Llama-3.1-Swallow-8B-Instruct-v0.5-gguf",
+    "declared_base_model": "tokyotech-llm/llama-3.1-swallow-8b-instruct-v0.5",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/DarkIdol-Llama-3.1-8B-Instruct-1.3-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/HARC-Llama-3.1-8B-Instruct-i1-GGUF",
+    "declared_base_model": "microsoft/harc-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Stoicism1_Llama3.1-8b-instruct-i1-GGUF",
+    "declared_base_model": "albertob12/stoicism1_llama3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-heretic-GGUF",
+    "declared_base_model": "p-e-w/llama-3.1-8b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "hoang1123/llama3.1-8b-instruct-Q8_0",
+    "declared_base_model": "unsloth/meta-llama-3.1-8b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/DarkIdol-Llama-3.1-8B-Instruct-1.0-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mmnga/Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/Llama-3.1-8B-Ultra-Instruct-GGUF",
+    "declared_base_model": "dampfinchen/llama-3.1-8b-ultra-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct_Abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/FuseChat-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "fuseai/fusechat-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Ericu950_-_Papy_2_Llama-3.1-8B-Instruct_text-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/vlada22_-_Meta-Llama-3.1-8B-Instruct-finki-edu-5c-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/p-e-w_Llama-3.1-8B-Instruct-heretic-GGUF",
+    "declared_base_model": "p-e-w/llama-3.1-8b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "LWDCLS/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF-IQ-Imatrix-Request",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/Llama-3.1-SauerkrautLM-8b-Instruct-GGUF",
+    "declared_base_model": "vagosolutions/llama-3.1-sauerkrautlm-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/phamtungthuy_-_Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/aifeifei798_-_DarkIdol-Llama-3.1-8B-Instruct-1.0-Uncensored-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "LWDCLS/DarkIdol-Llama-3.1-8B-Instruct-1.1-Uncensored-GGUF-IQ-Imatrix-Request",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/ProjectZLLM_-_SFT-dna-Llama-3.1-8B-Instruct-20-r16_merged-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "liodon-ai/Meta-Llama-3.1-8B-Instruct-imatrix-GGUF",
+    "declared_base_model": "nousresearch/meta-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Jbliterated-i1-GGUF",
+    "declared_base_model": "apolloraines/llama-3.3-8b-instruct-128k-jbliterated",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/DarkIdol-Llama-3.1-8B-Instruct-1.3-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/DarkIdol-Llama-3.1-8B-Instruct-1.0-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct_CODE_Python_English_Asistant-16bit-v2-i1-GGUF",
+    "declared_base_model": "agnuxo/meta-llama-3.1-8b-instruct_code_python_english_asistant-16bit-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/DarkIdol-Llama-3.1-8B-Instruct-1.0-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Jbliterated-GGUF",
+    "declared_base_model": "apolloraines/llama-3.3-8b-instruct-128k-jbliterated",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/kajuyerim_-_Llama-3.1-8B-Instruct-Financial-Sentiment-Analysis-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Swallow-8B-Instruct-v0.5-tooled-GGUF",
+    "declared_base_model": "vericava/llama-3.1-swallow-8b-instruct-v0.5-tooled",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/nvidia_Llama-3.1-8B-UltraLong-4M-Instruct-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-8b-ultralong-4m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mmnga/tokyotech-llm-Llama-3.1-Swallow-8B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Wengwengwhale_-_llama-3.1-8B-Instruct-finance-analyst-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/livil_-_llama3.1-8b-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "second-state/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "meta-llama/meta-llama-3.1-8b-instruct-gguf",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Vikhr-Llama3.1-8B-Instruct-R-21-09-24-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-r-2"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-EmailSpam-Finetuned-0.1-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/srikanthChittampally_-_Meta-Llama-3.1-8B-Instruct_lora_5892s-ft-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/TroyDoesAI_-_Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/HARC-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "microsoft/harc-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/leap-llm_-_Meta-Llama-3.1-8B-Instruct-sft-intercode-bash-iter1-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Jbliterated-v2-i1-GGUF",
+    "declared_base_model": "apolloraines/llama-3.1-8b-instruct-jbliterated-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/nvidia_Llama-3.1-8B-UltraLong-1M-Instruct-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-8b-ultralong-1m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/simonycl_-_llama-3.1-8b-instruct-ultrafeedback-agg-judge-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-MultiReflection-Instruct-i1-GGUF",
+    "declared_base_model": "leafspark/llama-3.1-8b-multireflection-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/grimjim_-_Llama-3.1-8B-Instruct-abliterated_via_adapter-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-EstLLM-8B-Instruct-0825-i1-GGUF",
+    "declared_base_model": "tartunlp/llama-3.1-estllm-8b-instruct-0825",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Laim_-_Llama-3.1-MedPalm2-imitate-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "DavidAU/Llama-3.1-DeepSeek-8B-DarkIdol-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/simonycl_-_llama-3.1-8b-instruct-armorm-judge-iter2-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Fei-v1-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-heretic-i1-GGUF",
+    "declared_base_model": "p-e-w/llama-3.1-8b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Logic-i1-GGUF",
+    "declared_base_model": "epistemeai/polypsyche-llama-3.1-8b-instruct-agent-0.003-128k-code-ds-auto-logic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Remek_-_Meta-Llama-3.1-8B-Instruct-PL-finetuned-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/netomi-ai_-_Llama-3.1-8B-instruct-library-finetuned-V2-merged-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Jbliterated-v2-GGUF",
+    "declared_base_model": "apolloraines/llama-3.1-8b-instruct-jbliterated-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Swallow-8B-Instruct-v0.2-i1-GGUF",
+    "declared_base_model": "tokyotech-llm/llama-3.1-swallow-8b-instruct-v0.2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/brunosdorneles_-_llama3.1_8B_Instruct_FP8_SOAP_reflection_test-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Andycurrent/DarkIdol-Llama-3.1-8B-Instruct-1.3-Uncensored_GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llamazing-3.1-8B-Instruct-i1-GGUF",
+    "declared_base_model": "sethuiyer/llamazing-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bullerwins/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-DeepHermes-R1-Reasoning-8B-DarkIdol-Instruct-1.2-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/JaphetHernandez_-_Llama-3.1-8B-Instruct-Similarity-Score-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-GGUF",
+    "declared_base_model": "epistemeai/fireball-meta-llama-3.1-8b-instruct-agent-0.003-128k-code-ds-auto",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-sft-SPIN-Llama-3.1-70B-Instruct-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/KoBioMed-Llama-3.1-8B-Instruct-i1-GGUF",
+    "declared_base_model": "lowenzahn/kobiomed-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct_CODE_Python_English_Asistant-16bit-v2-GGUF",
+    "declared_base_model": "agnuxo/meta-llama-3.1-8b-instruct_code_python_english_asistant-16bit-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Crystalcareai_-_Meta-llama-3.1-8b-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "theprint/CleverBoi-Llama-3.1-8B-Instruct",
+    "declared_base_model": "unsloth/meta-llama-3.1-8b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "fluidapp/meta-llama-3.1-8b-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Base-Instruct-SLERP-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:slerp"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/uzbek-llama-3.1-8B-instruct-v2-GGUF",
+    "declared_base_model": "behbudiy/llama-3.1-8b-instruct-uz",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-MultiReflection-Instruct-GGUF",
+    "declared_base_model": "leafspark/llama-3.1-8b-multireflection-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "grimjim/Llama-3.1-8B-Instruct-abliterated_via_adapter-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "DavidAU/Llama-3.1-DeepHermes-R1-Reasoning-8B-DarkIdol-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "legraphista/Meta-Llama-3.1-8B-Instruct-abliterated-IMat-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/DeepAutoAI_-_d2nwg_Llama-3.1-8B-Instruct-v0.0-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-math-i1-GGUF",
+    "declared_base_model": "epistemeai2/fireball-meta-llama-3.1-8b-instruct-agent-0.003-128k-code-math",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-abliterated-ICONN-1-BasicChat-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Fireball-Llama-3.1-8B-Instruct-v1-16bit-GGUF",
+    "declared_base_model": "epistemeai/fireball-llama-3.1-8b-instruct-v1-16bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "wyattjo116/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Fei-v1-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-UltraLong-1M-Instruct-i1-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-nemotron-8b-ultralong-1m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "duyntnet/Meta-Llama-3.1-8B-Instruct-imatrix-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Mungert/Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "meta-llama/meta-llama-3.1-8b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/vicgalle_-_Configurable-Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Fireball-Meta-Llama-3.1-8B-Instruct-0.001-128K-auto-i1-GGUF",
+    "declared_base_model": "epistemeai/fireball-meta-llama-3.1-8b-instruct-0.001-128k-auto",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Llama-3.1-8B-Ultra-Instruct-GGUF",
+    "declared_base_model": "nbeerbower/llama3.1-gutenberg-8b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Kagura-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "idkwhyitsnotworking/kagura-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Financial-Instruct-GGUF",
+    "declared_base_model": "kayatechai/llama-3.1-8b-financial-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Grammatical-Error-Correction-2-GGUF",
+    "declared_base_model": "johnrhimawan/llama-3.1-8b-instruct-grammatical-error-correction-2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/expresscompany_-_LLaMa3.1-8B-Instruction-Finance-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Reasoner-1o1_v0.3-GGUF",
+    "declared_base_model": "lyte/llama-3.1-8b-instruct-reasoner-1o1_v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-EstLLM-8B-Instruct-1125-i1-GGUF",
+    "declared_base_model": "tartunlp/llama-3.1-estllm-8b-instruct-1125",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Supernova-Lite-Instruct-merge-abliterated-8B-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "LWDCLS/DarkIdol-Llama-3.1-8B-Instruct-1.0-Uncensored-GGUF-IQ-Imatrix-Request",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-DeepSeek-8B-DarkIdol-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-Uncensored-DeLMAT-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/SillyTilly_-_Meta-Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/leafspark_-_Llama-3.1-8B-MultiReflection-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/phatvo_-_Meta-Llama3.1-8B-Instruct-RAFT-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Manojb_-_Meta-Llama-3.1-8B-Instruct-hf-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Llama-3.1-8B-Instruct-Reasoner-1o1_v0.3-GGUF",
+    "declared_base_model": "unsloth/meta-llama-3.1-8b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Bluerosesbutterfly/Meta-Llama-3.1-8B-Instruct-abliterated.Q4_K_M",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/Infinirc_-_Llama-3.1-Infinirc-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/huihui-ai_-_Meta-Llama-3.1-8B-Instruct-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/gpt-4o-distil-Llama-3.1-8B-Instruct-PaperWitch-heresy-GGUF",
+    "declared_base_model": "muxodious/gpt-4o-distil-llama-3.1-8b-instruct-paperwitch-heresy",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "ccharnkij/Llama-3.1-8B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/VityaVitalich_-_Llama3.1-8b-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "bartowski/nvidia_Llama-3.1-8B-UltraLong-2M-Instruct-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-8b-ultralong-2m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "violetahayashi69/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "ThomasBaruzier/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/amgadhasan_-_Meta-Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/aixsatoshi_-_Meta-Llama-3.1-8B-Instruct-plus-Swallow-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/NousResearch_-_Meta-Llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-KamalaHarris-v1-GGUF",
+    "declared_base_model": "nawhgnuj/llama-3.1-8b-instruct-kamalaharris-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "remots/tartuNLP-Llama-3.1-EstLLM-8B-Instruct-1125-heretic",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/aifeifei798_-_DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Agnuxo/Llama-3.1-Minitron-4B-Instruct_CODE_Python-GGUF_Spanish_English_8bit",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/llama-3.1-8b-wangchanX-instruct-GGUF",
+    "declared_base_model": "monshinawatra/llama-3.1-8b-wangchanx-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/ccibeekeoc42_-_Llama3.1-8b-instruct-SFT-2024-09-05_II-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/gaverfraxz_-_Meta-Llama-3.1-8B-Instruct-HalfAbliterated-TIES-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-EstLLM-8B-Instruct-0825-GGUF",
+    "declared_base_model": "tartunlp/llama-3.1-estllm-8b-instruct-0825",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "featherless-ai-quants/meta-llama-Meta-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "meta-llama-meta-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Bonsaikraft-8B-Instruct-i1-GGUF",
+    "declared_base_model": "grimjim/llama-3.1-bonsaikraft-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-heretic-GGUF",
+    "declared_base_model": "heretic-org/meta-llama-3.1-8b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/simonycl_-_llama-3.1-8b-instruct-ultrafeedback-armorm-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Fireball-Meta-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-i1-GGUF",
+    "declared_base_model": "epistemeai/fireball-meta-llama-3.1-8b-instruct-agent-0.003-128k-code",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "LWDCLS/Llama-3.1-8B-Instruct-Fei-v1-Uncensored-GGUF-IQ-Imatrix-Request",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Alex01837178373/Vikhr-Llama3.1-8B-Instruct-R-21-09-24-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-r-2"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-DeepHermes-R1-Reasoning-8B-DarkIdol-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "lmstudio-community/Llama-3.1-8B-UltraLong-1M-Instruct-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-8b-ultralong-1m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Frantic66/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "featherless-ai-quants/aifeifei798-DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Neurogen/Vikhr-Llama3.1-8B-Instruct-R-21-09-24-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-r-2"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/OPI-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "baai/opi-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-UltraLong-4M-Instruct-i1-GGUF",
+    "declared_base_model": "nvidia/llama-3.1-nemotron-8b-ultralong-4m-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/pranay27sy_-_Maritime-Classification-llama-3.1-8b-instruct-V3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Fireball-Llama-3.1-8B-Instruct-v1-16bit-i1-GGUF",
+    "declared_base_model": "epistemeai/fireball-llama-3.1-8b-instruct-v1-16bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/sh2orc_-_Llama-3.1-Korean-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Llama-3.1-8B-Instruct-Fei-v1-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/llama-3.1-8b-instruct-ortho-v6-GGUF",
+    "declared_base_model": "lodrick-the-lafted/llama-3.1-8b-instruct-ortho-v6",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct-wildfeedback-seed-RPO-0.005-GGUF",
+    "declared_base_model": "amberyifan/llama-3.1-8b-instruct-wildfeedback-seed-rpo-0.005",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/jiawei1018_-_openmathinstruct2-llama-3.1-8B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-plus-Swallow-GGUF",
+    "declared_base_model": "aixsatoshi/meta-llama-3.1-8b-instruct-plus-swallow",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Panacea-8B-instruct-v2-GGUF",
+    "declared_base_model": "mchl914/llama-3.1-panacea-8b-instruct-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/gpt-4o-distil-Llama-3.1-8B-Instruct-PaperWitch-heresy-i1-GGUF",
+    "declared_base_model": "muxodious/gpt-4o-distil-llama-3.1-8b-instruct-paperwitch-heresy",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "yosoyalguien/Meta-Llama-3.1-8B-Instruct-GGUF-TQ4_1S",
+    "declared_base_model": "bartowski/meta-llama-3.1-8b-instruct-gguf",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-Korean-8B-Instruct-GGUF",
+    "declared_base_model": "sh2orc/llama-3.1-korean-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "featherless-ai-quants/mlabonne-Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Llama-3.1-8B-Instruct_GRPO_Math-220kv00.04-GGUF",
+    "declared_base_model": "neelectric/llama-3.1-8b-instruct_grpo_math-220kv00.04",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Configurable-Llama-3.1-8B-Instruct-GGUF",
+    "declared_base_model": "vicgalle/configurable-llama-3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Nemesispro/Polypsyche-Llama-3.1-8B-Instruct-Agent-0.003-128K-code-ds-auto-Logic",
+    "declared_base_model": "epistemeai/polypsyche-llama-3.1-8b-instruct-agent-0.003-128k-code-ds-auto-logic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Kita258/Meta-Llama-3.1-8B-Instruct-abliterated-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "RichardErkhov/cs6220-ai-gradescope-grader_-_cs2200-llama-3.1-8B-instruct-numbers-only-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "featherless-ai-quants/huihui-ai-Meta-Llama-3.1-8B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "QuantFactory/Fireball-Alpaca-Llama-3.1-8B-Instruct-KTO-beta-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:kto"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "Arc1el/Llama-3.1-Korean-8B-Instruct-Law-GGUF",
+    "declared_base_model": "unsloth/meta-llama-3.1-8b-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/Meta-Llama-3.1-8B-Instruct-heretic-i1-GGUF",
+    "declared_base_model": "heretic-org/meta-llama-3.1-8b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Llama-3.1-8B-Instruct",
+    "repo_id": "mradermacher/MAGIC-Llama3.1-8B-Instruct-i1-GGUF",
+    "declared_base_model": "xiaoyuwen/magic-llama3.1-8b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "bartowski/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Jbliterated-i1-GGUF",
+    "declared_base_model": "apolloraines/mistral-7b-instruct-v0.3-jbliterated",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Parasite-i1-GGUF",
+    "declared_base_model": "apolloraines/mistral-7b-instruct-v0.3-parasite",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Jbliterated-GGUF",
+    "declared_base_model": "apolloraines/mistral-7b-instruct-v0.3-jbliterated",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/grimjim_-_mistralai-Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-TISER-i1-GGUF",
+    "declared_base_model": "xueyufeizhang/mistral-7b-instruct-v0.3-tiser",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "hermes42/Mistral-7B-Instruct-v0.3-imatrix-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "ChitrankDixit/vidwaan-mistral-7B-instruct-v0.3",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "noctrex/Mistral-7B-Instruct-v0.3-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mmnga/Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/mistralai_-_Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Parasite-GGUF",
+    "declared_base_model": "apolloraines/mistral-7b-instruct-v0.3-parasite",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "iimadouu/mistral-7b-instruct-v0.3.Q4_K_M-uncensored.gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Mistral-7B-KNUT-v0.3-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:slerp"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/unsloth_-_mistral-7b-instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "LiteLLMs/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Synatra-7B-v0.3-RP-Mistral-7B-Instruct-v0.1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-rp-"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/bhujith10_-_Mistral-7B-Instruct-v0.3_instruction_tuned_2024_12_07_09_04-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "PrunaAI/Mistral-7B-Instruct-v0.3-GGUF-smashed",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-ChemGenius-GGUF",
+    "declared_base_model": "chemgenius/mistral-7b-instruct-v0.3-chemgenius",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "pravdin/Hermes-2-Pro-Mistral-7B-Mistral-7B-Instruct-v0.3-linear-merge-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/MaziyarPanahi_-_Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Mungert/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": "mistralai/mistral-7b-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Mistral-7B-KNUT-v0.3-Mistral-7B-Instruct-v0.1-GGUF",
+    "declared_base_model": "maziyarpanahi/mistral-7b-knut-v0.3-mistral-7b-instruct-v0.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Synatra-7B-v0.3-RP-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-rp-"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "brittlewis12/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Ryze-Mistral-7B-Instruct-v0.3-10-GGUF",
+    "declared_base_model": "fulcrum-ai/ryze-mistral-7b-instruct-v0.3-10",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "duyntnet/Mistral-7B-Instruct-v0.3-imatrix-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "rubra-ai/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-TISER-GGUF",
+    "declared_base_model": "xueyufeizhang/mistral-7b-instruct-v0.3-tiser",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/wkshin89_-_mistral-7b-instruct-ko-test-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Recouper/Mistral-7B-Instruct-v0.3-abliterated-Q5_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Ryze-Mistral-7B-Instruct-v0.3-10-i1-GGUF",
+    "declared_base_model": "fulcrum-ai/ryze-mistral-7b-instruct-v0.3-10",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/bellman-mistral-7b-instruct-v0.3-GGUF",
+    "declared_base_model": "neph1/bellman-mistral-7b-instruct-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MaziyarPanahi/Synatra-7B-v0.3-dpo-Mistral-7B-Instruct-v0.1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/mistral-community_-_Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Forensics-v1-GGUF",
+    "declared_base_model": "gerasmark/mistral-7b-instruct-v0.3-forensics-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "thesven/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-v0.3-sft-ultrachat-SPIN-Mistral-8x7B-Instruct-v0.1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-DesarrolloSoftware1-GGUF",
+    "declared_base_model": "andrescamargo/mistral-7b-instruct-v0.3-desarrollosoftware1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AaronFeng753/Mistral-7B-Instruct-v0.3-abliterated-Q4_K_S-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Synatra-7B-v0.3-RP-Mistral-7B-Instruct-v0.2-slerp-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-rp-"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Erocal/Mistral_7B_v0.3_Instruct_UnityResloved",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Synatra-7B-v0.3-RP-Mistral-7B-Instruct-v0.2-slerp-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-rp-"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-Instruct-v0.3-Verilog-7B-GGUF",
+    "declared_base_model": "nyu-dice-lab/mistral-instruct-v0.3-verilog-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mukel/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-pruned-GGUF",
+    "declared_base_model": "ehristoforu/mistral-7b-instruct-v0.3-pruned",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AI-Engine/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "RichardErkhov/JackRoz_-_Mistral-7B-Instruct-v0.3-pl-merged-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-v0.3-sft-SPIN-Mistral-8x7B-Instruct-v0.1-rm-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AaronFeng753/Mistral-7B-Instruct-v0.3-abliterated-Q8_0-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "vamshigvk/Mistral-7B-Instruct-v0.3-FP16.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Math-GGUF",
+    "declared_base_model": "alelcv27/mistral-7b-instruct-v0.3-math",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/bellman-mistral-7b-instruct-v0.3-i1-GGUF",
+    "declared_base_model": "neph1/bellman-mistral-7b-instruct-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "power0341/Mistral-7B-Instruct-v0.3-reasoning",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-v0.3-sft-SPIN-Mistral-8x7B-Instruct-v0.1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:sft"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "PJEDeveloper/mistralai_Mistral-7B-Instruct-v0.3-F16.gguf-Q5_K_M",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "professorf/Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": "mistralai/mistral-7b-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Heretic-GGUF",
+    "declared_base_model": "0xa50c1a1/mistral-7b-instruct-v0.3-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/mistral-7b-v0.3-instruct-norobots-GGUF",
+    "declared_base_model": "lbringerl/mistral-7b-v0.3-instruct-norobots",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AlSamCur123/mistral-7b-instruct-v0.3",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mkenfenheuer/Mistral-7B-Instruct-v0.3-ha-function-calling",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Vasdeen/MODTE6-FTCG-qLORA-UNSLOTH-Biocode-Python-200-unsloth-mistral-7b-instruct-v0.3-bnb-4bit",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "sunil-pathak/Mistral-7B-Instruct-v0.3-Q4_K_M",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "nazimali/mistral-7b-v0.3-instruct-arabic",
+    "declared_base_model": "mistralai/mistral-7b-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "juanrha/unsloth-mistral-7b-instruct-v0.3-bnb-4bit-email-classification",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "DevQuasar/Mistral-7B-Instruct-v0.3_brainstorm-v3.1-GGUF",
+    "declared_base_model": "devquasar/mistral-7b-instruct-v0.3_brainstorm-v3.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "dim-eleftheriou/Mistral-7B-Instruct-v0.3-mitre-v0.1-GGUF-Q4_k_m",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "MLShare/mistral-7b-instruct-v0.3-bnb-4bit-python",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Heretic-i1-GGUF",
+    "declared_base_model": "0xa50c1a1/mistral-7b-instruct-v0.3-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-v2-GGUF",
+    "declared_base_model": "freshhhh/mistral-7b-instruct-v0.3-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "sellacio/charcarter_mistral-7b-instruct-v0.3-bnb-4bit_1B",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "tensorblock/mistral-7b-instruct-ko-test-v0.3-GGUF",
+    "declared_base_model": "wkshin89/mistral-7b-instruct-ko-test-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "dim-eleftheriou/Mistral-7B-Instruct-v0.3-attack-GGUF-Q4_k_m",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "sunil-pathak/Mistral-7B-Instruct-v0.3-IQ4_NL",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "divyanshusingh/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_focalloss_EMH-emotional-reactions_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "meshllm/mistral-7b-instruct-v0.3-parity-f16-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "professorf/Mistral-7B-Instruct-v0.3-q8_0-gguf",
+    "declared_base_model": "mistralai/mistral-7b-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/SmartAgent-Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": "emrecanacikgoz/smartagent-mistral-7b-instruct-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "matteanedda/reasonong_mistral-7b-instruct-v0.3-bnb-4bit",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Jr12lm12/mistral-7b-instruct-v0.3-bnb-De_En_Solar-QLORA",
+    "declared_base_model": "unsloth/meta-llama-3.1-8b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Krys-toff/mistral-7b-instruct-v0.3-bnb-4bit-wesh-lora-q4_k_m-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "FusionQuill/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_EMH-emotional-reactions_ecot_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AlekseyElygin/mistral-7b-instruct-v0.3-GGUF",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AlekseyElygin/mistral-7b-instruct-v0.3-bnb-8ep-GGUF",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "BernalHR/mistral-7b-instruct-v0.3-bnb-4bit-GGUF",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "sunil-pathak/Mistral-7B-Instruct-v0.3-Q6_K",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "alienverarslan/mistral-instruct-7B-V0.3-banking-turkish-Q5_K_M-GGUF",
+    "declared_base_model": "alienverarslan/mistral-instruct-7b-v0.3-banking-turkish",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "lbringerl/mistral-7b-v0.3-instruct-norobots-8bit-guff",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-Code-GGUF",
+    "declared_base_model": "alelcv27/mistral-7b-instruct-v0.3-code",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "giannisan/mistral-7b-instruct-v0.3-depth-upscaling-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "SickDodger/Mistral-7B-Instruct-v0.3-abliterated-Q6_K-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "dynomite567/Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "ttrpg/Mistral-7B-Instruct-v0.3-gguf",
+    "declared_base_model": "ttrpg/mistral-7b-instruct-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_EMH-emotional-reactions_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "minhcrafters/mistral-7b-instruct-v0.3-discord-GGUF",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "crusoeai/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "neopolita/mistral-7b-instruct-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "alienverarslan/mistral-instruct-7B-V0.3-banking-turkish-Q8_0-GGUF",
+    "declared_base_model": "alienverarslan/mistral-instruct-7b-v0.3-banking-turkish",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_focalloss_EMH-explorations_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_EMH-interpretations_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "mradermacher/Mistral-7B-Instruct-v0.3-finetune-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Joseph195410/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "AlekseyElygin/mistral-7b-instruct-v0.3-bnb-8ep-4b-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "GyeongjuLee/model-mistral-7b-instruct-v0.3-bnb-4bit_EMH-explorations_1",
+    "declared_base_model": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "KalaiarasiS14/Mistral-7B-Instruct-v0.3-f16",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "rakmik/Mistral-7B-Instruct-v0.3-GGUF_F16",
+    "declared_base_model": "bartowski/mistral-7b-instruct-v0.3-gguf",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Sleem247/Mistral-7B-Instruct-v0.3-QLoRA-Legal-Q8_0-GGUF",
+    "declared_base_model": "eshahm/mistral-7b-instruct-v0.3-qlora-legal",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "Maeli-k/Mistral-7B-Instruct-v0.3-r-128-lora-128-guarani-grammar-fewshot-instruct-Q8_0-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-r-1"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "JamesChen2003/Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF",
+    "declared_base_model": "xianghuai/mistral-7b-instruct-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Mistral-7B-Instruct-v0.3",
+    "repo_id": "NightFuryTimo/Mistral-7B-Instruct-v0.3-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "unsloth/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lmstudio-community/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lmstudio-community/Qwen2.5-7B-Instruct-1M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b-instruct-1m",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ggml-org/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5-Math-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-math-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "unsloth/Qwen2.5-Coder-7B-Instruct-128K-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5-Coder-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen_Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "BlossomsAI/Qwen2.5-Coder-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5.1-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "unsloth/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "stefancosma/Qwen2.5-Coder-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "DevQuasar-4/huihui-ai.Qwen2.5-7B-Instruct-1M-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "matrixportalx/Qwen2.5-Coder-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "PatataAliena/Qwen2.5-VL-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-OBLITERATED-advanced-i1-GGUF",
+    "declared_base_model": "cgamez82/qwen2.5-coder-7b-instruct-obliterated-advanced",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "taot85126/Qwen2.5-7B-Instruct-abliterated-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Mungert/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "richardyoung/Qwen2.5-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "DhruvalLabs/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "sillykiwi/Qwen2.5-Coder-7B-Instruct-Ghidra-v2-Q4_K_M-GGUF",
+    "declared_base_model": "sillykiwi/qwen2.5-coder-7b-instruct-ghidra-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-abliterated-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Qwen2.5-7B-Instruct-1M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b-instruct-1m",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/HARC-Qwen2.5-7B-Instruct-i1-GGUF",
+    "declared_base_model": "microsoft/harc-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Ghidra-v2-i1-GGUF",
+    "declared_base_model": "sillykiwi/qwen2.5-coder-7b-instruct-ghidra-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/cutelemonlili_-_Qwen2.5-1.5B-Instruct_MATH_training_response_Qwen2.5_7B-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Orion-zhen/Qwen2.5-7B-Instruct-Uncensored-Q5_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Meissa-Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "orion-zhen/qwen2.5-7b-instruct-uncensored",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "decerto/Qwen2.5-VL-7B-Instruct-abliterated-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "DevQuasar/Qwen.Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Ektome-Qwen2.5-Coder-7B-Instruct-PristinelyUncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lmstudio-community/Qwen2.5-Math-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-math-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "saidutta69/Qwen2.5-Coder-7B-Instruct-heretic",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "wangkanai/qwen2.5-vl-7b-instruct",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "koorbmeh/qwen2.5-7b-instruct-abliterated-v2-q4_K_M",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Zememic/Qwen2.5-VL-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "cgxjdzz/Qwen-2.5-7B-Instruct-novel-lora",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-heretic-GGUF",
+    "declared_base_model": "coder3101/qwen2.5-vl-7b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ClaudioItaly/Qwen2.5-Coder-7B-Instruct-Q5_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Meissa-Qwen2.5-7B-Instruct-i1-GGUF",
+    "declared_base_model": "orion-zhen/meissa-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "maxwellwwy/Qwen2.5-VL-7B-Instruct-Q4_0-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "gsoloupis/Qwen2.5-VL-7B-Instruct-Q2_K-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Humanish-Qwen2.5-7B-Instruct-i1-GGUF",
+    "declared_base_model": "humanllms/human-like-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ggml-org/Qwen2.5-Coder-7B-Instruct-Q8_0-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "second-state/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Ghidra-v2-GGUF",
+    "declared_base_model": "sillykiwi/qwen2.5-coder-7b-instruct-ghidra-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Zynerji/Ektome-Qwen2.5-Coder-7B-Instruct-PristinelyUncensored",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Xooom/Qwen2.5-VL-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "WSDW/Qwen2.5-7B-Instruct-Uncensored-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bartowski/Human-Like-Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "humanllms/humanish-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ThomasBaruzier/Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "liodon-ai/Qwen2.5-Coder-7B-Instruct-imatrix-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Josiefied-Qwen2.5-7B-Instruct-abliterated-v2-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "teddylee777/Qwen2.5-7B-Instruct-kowiki-qa-context-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-heretic-i1-GGUF",
+    "declared_base_model": "coder3101/qwen2.5-vl-7b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "smcleod/Qwen2.5-Coder-7B-Instruct-Q8_0-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "lumen-models/Qwen2.5-7B-Instruct-abliterated-v2-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/AOT-Qwen2.5-VL-7B-Instruct-i1-GGUF",
+    "declared_base_model": "chisato111/aot-qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Kondara/Qwen2.5-Coder-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "bekoozkan/godot-qwen2.5-coder-7b-instruct-bnb-4bit",
+    "declared_base_model": "unsloth/qwen2.5-coder-7b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-RLVR-i1-GGUF",
+    "declared_base_model": "virtuoussy/qwen2.5-7b-instruct-rlvr",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Qwen_-_Qwen2.5-Coder-7B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Smoffyy/Qwen2.5-VL-7B-Instruct-Pure-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-7B-Instruct-1M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b-instruct-1m",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-1M-Thinking-Claude-Gemini-GPT5.2-DISTILL-PaperWitch-heresy-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:distill"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-1M-Thinking-Claude-Gemini-GPT5.2-DISTILL-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:distill"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "tensorblock/Qwen2.5-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-Unredacted-MAX-i1-GGUF",
+    "declared_base_model": "prithivmlmods/qwen2.5-vl-7b-instruct-unredacted-max",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/evolveon_-_Qwen2.5-7B-Instruct-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "yemiao2745/Qwen2.5-7B-Instruct-Uncensored-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "sarayar/Qwen2.5-Coder-7B-Instruct-GGUF-Q3_K_M",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Osiris-7B-Instruct-i1-GGUF",
+    "declared_base_model": "judgmentlabs/qwen2.5-osiris-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "tensorblock/Qwen2.5-7B-Instruct-1M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b-instruct-1m",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Josiefied-Qwen2.5-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-v3-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/huihui-ai_-_Qwen2.5-7B-Instruct-abliterated-v3-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-Math-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-math-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "legraphista/Qwen2.5-Coder-7B-Instruct-IMat-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/HARC-Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "microsoft/harc-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "ThomasBaruzier/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/RTX3090x2_-_qwen2.5-7B-Instruct-v0.2.9-v0.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-v2-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-1M-heretic-i1-GGUF",
+    "declared_base_model": "saidutta69/qwen2.5-7b-instruct-1m-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Andycurrent/Qwen2.5-7B-Instruct-Uncensored_GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "second-state/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "samgreen/Qwen2.5-VL-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Mungert/Qwen2.5-7B-Instruct-1M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/homeb82784_-_qwen2.5-7b-instruct-v1.2.2-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-abliterated-v3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "prithivMLmods/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/2point5p_-_krx-Qwen2.5-7B-Instruct-X-Series-Only-5-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "rexionmars/Qwen2.5-VL-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Uncensored-Flux-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-OBLITERATED-advanced-GGUF",
+    "declared_base_model": "cgamez82/qwen2.5-coder-7b-instruct-obliterated-advanced",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "stacklok/Qwen2.5-Coder-7B-Instruct-stitch-tools-chat",
+    "declared_base_model": "unsloth/qwen2.5-coder-7b-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct_d1_science_all_large-i1-GGUF",
+    "declared_base_model": "mlfoundations-dev/d1_science_all_large",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-1M-heretic-GGUF",
+    "declared_base_model": "saidutta69/qwen2.5-7b-instruct-1m-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Uncensored-Flux-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/huihui-ai_-_Qwen2.5-7B-Instruct-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "chiakelvin/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Goekdeniz-Guelmez/Josiefied-Qwen2.5-7B-Instruct-abliterated-v2-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-heretic-i1-GGUF",
+    "declared_base_model": "trohrbaugh/qwen2.5-coder-7b-instruct-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Goekdeniz-Guelmez_-_Josiefied-Qwen2.5-7B-Instruct-abliterated-v2-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Meissa-Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "orion-zhen/meissa-qwen2.5-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-Unredacted-MAX-GGUF",
+    "declared_base_model": "prithivmlmods/qwen2.5-vl-7b-instruct-unredacted-max",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Uncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Orion-zhen_-_Qwen2.5-7B-Instruct-Uncensored-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Unity-i1-GGUF",
+    "declared_base_model": "neph1/qwen2.5-coder-7b-instruct-unity",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/DeepMount00_-_Qwen2.5-7B-Instruct-MathCoder-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "DuoNeural/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-coder-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "legraphista/Qwen2.5-Math-7B-Instruct-IMat-GGUF",
+    "declared_base_model": "qwen/qwen2.5-math-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "QuantFactory/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-ties"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-1M-Thinking-Claude-Gemini-GPT5.2-DISTILL-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:distill"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.2-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-ties"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Ektome-Qwen2.5-Coder-7B-Instruct-PristinelyUncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "teddylee777/Qwen2.5-7B-Instruct-kowiki-qa-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/huihui-ai_-_Qwen2.5-7B-Instruct-abliterated-v2-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "chiakelvin/Qwen2.5-Math-7B-Instruct-Q4_K_L.gguf",
+    "declared_base_model": "qwen/qwen2.5-math-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "MaziyarPanahi/Qwen2.5-7B-Instruct-abliterated-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Qwen_-_Qwen2.5-Math-7B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "cxtb/Qwen2.5-VL-7B-Instruct-Q8_0-GGUF",
+    "declared_base_model": "qwen/qwen2.5-vl-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "iamandreistef/qwen-2.5-coder-7b-instruct-network-assistant-ultimate-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "chiakelvin/Qwen2.5-Math-7B-Instruct-Q5_K_M.gguf",
+    "declared_base_model": "qwen/qwen2.5-math-7b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "MaziyarPanahi/Qwen2.5-7B-Instruct-Uncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-Vision-R1-GGUF",
+    "declared_base_model": "jefferyzhan/qwen2.5-vl-7b-instruct-vision-r1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-3x-Instruct-TIES-v1.1-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-ties"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-Android-Control-GGUF",
+    "declared_base_model": "officerchul/qwen2.5-vl-7b-instruct-android-control-5a",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Mungert/Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": "qwen/qwen2.5-7b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "MaziyarPanahi/Qwen2.5-Coder-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Jailbroken-GGUF",
+    "declared_base_model": "cooperleong00/qwen2.5-7b-instruct-jailbroken",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/homeb82784_-_qwen2.5-7b-instruct-cpt-v2.0-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Josiefied-Qwen2.5-7B-Instruct-abliterated-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "dthryjdrk/Qwen2.5-VL-7B-Instruct-abliterated-Q8_0-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "smarttasks/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "CISCai/Qwen2.5-Coder-7B-Instruct-SOTA-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "KiwiPewe/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "criscarleo/Qwen2.5-Coder-7B-Instruct-abliterated",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/homeb82784_-_qwen2.5-7b-instruct-cpt-v5.3-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/TheBlueObserver_-_Qwen2.5-7B-Instruct-MLX-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "gaianet/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Goekdeniz-Guelmez_-_Josiefied-Qwen2.5-7B-Instruct-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RefalMachine/ruadapt_qwen2.5_7B_ext_u48_instruct_gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "dfoc99/Qwen2.5-VL-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-Desyced-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "second-state/Qwen2.5-Math-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "featherless-ai-quants/huihui-ai-Qwen2.5-Coder-7B-Instruct-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "PrunaAI/AIFunOver-Qwen2.5-7B-Instruct-1M-openvino-fp16-GGUF-smashed",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Toucan-Qwen2.5-7B-Instruct-v0.1-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "darwinkernelpanic/Qwen2.5-Coder-7B-Instruct-Luau-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/unsloth_-_Qwen2.5-Coder-7B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-banglaprotha-v2-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "gaianet/Qwen2.5-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "WSDW/Qwen2.5-7B-Instruct-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-Unity-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "featherless-ai-quants/Qwen-Qwen2.5-Coder-7B-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "cxtb/Qwen2.5-VL-7B-Instruct-Q6_K-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct_character_roleplay_dataset_20000-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:roleplay"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen_2.5_VL_7B_Instruct_MIMIC-CXR-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/Qwen_-_Qwen2.5-7B-Instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "Nandyfluff/Qwen2.5-7B-Instruct-Coder-Merge-Tool-use-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-VL-7B-Instruct-ft-20250814163916929-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "saidutta69/Qwen2.5-7B-Instruct-1M-heretic",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct-fin-v1.5-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "RichardErkhov/huihui-ai_-_Qwen2.5-Coder-7B-Instruct-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "Qwen2.5-7B-Instruct",
+    "repo_id": "mradermacher/Qwen2.5-7B-Instruct_d1_science_all_large-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "bartowski/gemma-2-9b-it-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "legraphista/Gemma-2-9B-It-SPPO-Iter3-IMat-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Hansoldeco-Gemma-2-9b-it-v0.2-i1-GGUF",
+    "declared_base_model": "sosoai/hansoldeco-gemma-2-9b-it-v0.2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "bartowski/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/Unispac_-_Gemma-2-9B-IT-With-Deeper-Safety-Alignment-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/princeton-nlp_-_gemma-2-9b-it-DPO-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-Llama-Swallow-9b-it-v0.1-Heretic-i1-GGUF",
+    "declared_base_model": "chikoi7/gemma-2-llama-swallow-9b-it-v0.1-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9B-It-SPPO-Iter3-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/Q-PING_-_krx_gemma-2-9b-it_1028-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9b-it-chat-doctor-merged-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "bartowski/gemma-2-9b-it-WPO-HB-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:wpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9b-it-train6-GGUF",
+    "declared_base_model": "ehristoforu/gemma2-9b-it-train6",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/rtzr_-_ko-gemma-2-9b-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9B-it-advanced-v2.1-i1-GGUF",
+    "declared_base_model": "jsgreenawalt/gemma-2-9b-it-advanced-v2.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-SimPO-i1-GGUF",
+    "declared_base_model": "princeton-nlp/gemma-2-9b-it-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/IlyaGusev_-_gemma-2-9b-it-abliterated-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/ehristoforu_-_Gemma2-9B-it-psy10k-mental_health-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mmnga/HODACHI-EZO-Humanities-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-abliterated-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-DPO-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/kyungeun_-_gemma-2-9b-it-mathinstruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/unsloth_-_gemma-2-9b-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-neogenesis-ita-i1-GGUF",
+    "declared_base_model": "anakin87/gemma-2-9b-neogenesis-ita",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/ehristoforu_-_Gemma2-9b-it-train6-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-SimPO-GGUF",
+    "declared_base_model": "princeton-nlp/gemma-2-9b-it-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/UCLA-AGI_-_Gemma-2-9B-It-SPPO-Iter3-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/HODACHI_-_EZO-Humanities-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-WPO-HB-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:wpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "KIST-robot-intelligence/ko-gemma-2-9b-it-GGUF-quantization",
+    "declared_base_model": "rtzr/ko-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/UCLA-AGI_-_Gemma-2-9B-It-SPPO-Iter1-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/walrus-gemma-2-9b-it-v01-i1-GGUF",
+    "declared_base_model": "aiyets/walrus-gemma-2-9b-it-v01",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-Uncensored-DeLMAT-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9B-it-advanced-v2.1-GGUF",
+    "declared_base_model": "wzhouad/gemma-2-9b-it-wpo-hb",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/kingabzpro_-_Gemma-2-9b-it-chat-doctor-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "ThomasBaruzier/gemma-2-9b-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-DPO-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Hansoldeco-Gemma-2-9b-it-v0.2-GGUF",
+    "declared_base_model": "sosoai/hansoldeco-gemma-2-9b-it-v0.2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "DiTy/gemma-2-9b-it-russian-strict-function-calling-DPO",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/UCLA-AGI_-_Gemma-2-9B-It-SPPO-Iter2-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "MCZK/EZO-Common-9B-gemma-2-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9B-it-advanced-v2.1-GGUF",
+    "declared_base_model": "jsgreenawalt/gemma-2-9b-it-advanced-v2.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "MCZK/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/EZO-Common-9B-gemma-2-it-GGUF",
+    "declared_base_model": "axcxept/ezo-common-9b-gemma-2-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/SauerkrautLM-gemma-2-9b-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-WPO-HB-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:wpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Athena-gemma-2-9b-it-i1-GGUF",
+    "declared_base_model": "epistemeai/athena-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/HODACHI_-_EZO-Common-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Athena-gemma-2-9b-it-Philos-KTO-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:kto"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/ko-gemma-2-9b-it-GGUF",
+    "declared_base_model": "rtzr/ko-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9B-it-blend-i1-GGUF",
+    "declared_base_model": "spacematt/gemma-2-9b-it-blend",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "ChiKoi7/Gemma-2-Llama-Swallow-9b-it-v0.1-Heretic-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/SauerkrautLM-gemma-2-9b-it-i1-GGUF",
+    "declared_base_model": "vagosolutions/sauerkrautlm-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mmnga/HODACHI-EZO-Common-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-WPO-HB-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:wpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Alex01837178373/gemma-2-9b-it-abliterated-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "dahara1/gemma-2-9b-it-gguf-japanese-imatrix",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mmnga/Gemma-2-Llama-Swallow-9b-it-v0.1-gguf",
+    "declared_base_model": "tokyotech-llm/gemma-2-llama-swallow-9b-it-v0.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/jsgreenawalt_-_gemma-2-9B-it-advanced-v2.1-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9B-IT-Simpo-Infinity-Preference-i1-GGUF",
+    "declared_base_model": "baai/gemma2-9b-it-simpo-infinity-preference",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/Translation-EnKo_-_gemma-2-9b-it-translation-general1.2m-en-ko-e1-b14-trc313eval45-e2-b14-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/wzhouad_-_gemma-2-9b-it-WPO-HB-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:wpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/EZO-Common-9B-gemma-2-it-GGUF",
+    "declared_base_model": "hodachi/ezo-common-9b-gemma-2-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/EZO-Common-9B-gemma-2-it-i1-GGUF",
+    "declared_base_model": "axcxept/ezo-common-9b-gemma-2-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/AXCXEPT_-_EZO-Common-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-Muesli-2-9B-it-i1-GGUF",
+    "declared_base_model": "spacematt/gemma-muesli-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/DreamTeam-gemma2-9b-it-vision-GGUF",
+    "declared_base_model": "omeryentur/dreamteam-gemma2-9b-it-vision",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/SillyTilly_-_google-gemma-2-9b-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/czech-gemma-2-9b-it-i1-GGUF",
+    "declared_base_model": "lodrick-the-lafted/czech-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-neogenesis-ita-GGUF",
+    "declared_base_model": "anakin87/gemma-2-9b-neogenesis-ita",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "rtjdfgj/gemma-2-9b-it-my-finetuned-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Nexesenex/Google_Gemma-2-9b-it_iMat_Custom_Quant_Stategies-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "duyntnet/gemma-2-9b-it-imatrix-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "BasedAGI/Gemma-2-9B-IT-Abliterated-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-Bloom-2-9B-it-Uncensored-DeLMAT-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9B-It-SPPO-Iter2-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-fix-system-role-i1-GGUF",
+    "declared_base_model": "dangvansam/gemma-2-9b-it-fix-system-role",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/EZO-Humanities-9B-gemma-2-it-i1-GGUF",
+    "declared_base_model": "axcxept/ezo-humanities-9b-gemma-2-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/koalajun_-_Gemma-2-9b-it-Ko-Crypto-Translate-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/BgGPT-Gemma-2-9B-IT-v1.0-i1-GGUF",
+    "declared_base_model": "insait-institute/bggpt-gemma-2-9b-it-v1.0",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/kaytoo2022_-_gemma-2-9b-it-winetuned-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/hometax_-_sapie-gemma2-9B-IT-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9B-It-SPPO-Iter1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-mathinstruct-GGUF",
+    "declared_base_model": "kyungeun/gemma-2-9b-it-mathinstruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9b-it-chat-doctor-merged-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:merge"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9B-IT-Simpo-Infinity-Preference-GGUF",
+    "declared_base_model": "baai/gemma2-9b-it-simpo-infinity-preference",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/princeton-nlp_-_gemma-2-9b-it-SimPO-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/ehristoforu_-_Gemma2-9B-it-psy10k-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/Easy-Systems_-_easy-ko-gemma-2-9b-it-v1-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/ko-gemma-2-9b-it-GGUF",
+    "declared_base_model": "davidkim205/ko-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/walrus-gemma-2-9b-it-v01-GGUF",
+    "declared_base_model": "aiyets/walrus-gemma-2-9b-it-v01",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Athena-gemma-2-9b-it-GGUF",
+    "declared_base_model": "epistemeai/athena-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "INSAIT-Institute/BgGPT-Gemma-2-9B-IT-v1.0-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/DreamTeam-gemma2-9b-it-vision-i1-GGUF",
+    "declared_base_model": "omeryentur/dreamteam-gemma2-9b-it-vision",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/hometax_-_gemma-2-9b-it-390K-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-Uncensored-DeLMAT-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/EZO-Humanities-9B-gemma-2-it-GGUF",
+    "declared_base_model": "axcxept/ezo-humanities-9b-gemma-2-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-Llama-Swallow-9b-it-v0.1-i1-GGUF",
+    "declared_base_model": "tokyotech-llm/gemma-2-llama-swallow-9b-it-v0.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gammaPO-gemma-2-9b-it-GGUF",
+    "declared_base_model": "sunshine279/gammapo-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "ZeroWw/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/BgGPT-Gemma-2-9B-IT-v1.0-GGUF",
+    "declared_base_model": "insait-institute/bggpt-gemma-2-9b-it-v1.0",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9B-it-psy10k-mental_health-i1-GGUF",
+    "declared_base_model": "ehristoforu/gemma2-9b-it-psy10k-mental_health",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/AXCXEPT_-_EZO-Humanities-9B-gemma-2-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/google_-_gemma-2-9b-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/gemma-2-9b-it-fix-system-role-GGUF",
+    "declared_base_model": "dangvansam/gemma-2-9b-it-fix-system-role",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/GemmaX2-28-9B-it-GGUF",
+    "declared_base_model": "themex1380/gemmax2-28-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-DS-V2-GGUF",
+    "declared_base_model": "karun-7/gemma-2-9b-it-ds-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/gemma-2-9b-it-SimPO-GGUF",
+    "declared_base_model": "princeton-nlp/gemma-2-9b-it-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "MCZK/EZO-Humanities-9B-gemma-2-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/EZO-Humanities-9B-gemma-2-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "raymsm/gemma-2-9b-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "TheWirelessPhoenix/gemma-2-9b-it-Q4_K_M",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/czech-gemma-2-9b-it-GGUF",
+    "declared_base_model": "lodrick-the-lafted/czech-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "redponike/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/chnaaam_-_santa-gemma2-9b-it-20240910-v0.1-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "qwp4w3hyb/Gemma-2-9B-It-SPPO-Iter3-iMat-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "hienbm/gemma2-9b-it-big5",
+    "declared_base_model": "unsloth/gemma-2-9b-it-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Bluerosesbutterfly/gemma-2-9b-it-abliterated.Q4_K_M",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-Spoon-2-9B-it-i1-GGUF",
+    "declared_base_model": "spacematt/gemma-spoon-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9b-it-Girl-v1-GGUF",
+    "declared_base_model": "akimite/gemma2-9b-it-girl-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/spanish-gemma-2-9b-it-i1-GGUF",
+    "declared_base_model": "lodrick-the-lafted/spanish-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9B-it-Boku-v1-GGUF",
+    "declared_base_model": "akimite/gemma2-9b-it-boku-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "freakyskittle/gemma-4-9b-it-Q2_K",
+    "declared_base_model": "google/gemma-4-31b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-russian-strict-function-calling-DPO-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "hrtdind/Gemma-2-9B-It-SPPO-Iter3-Q5_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/spanish-gemma-2-9b-it-GGUF",
+    "declared_base_model": "lodrick-the-lafted/spanish-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/MT1-Gen6-W-gemma-2-ItATv3-9B-GGUF",
+    "declared_base_model": "zelk12/mt1-gen6-w-gemma-2-itatv3-9b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/SauerkrautLM-gemma-2-9b-it-GGUF",
+    "declared_base_model": "vagosolutions/sauerkrautlm-gemma-2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Athena-gemma-2-9b-it-Philos-KTO-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:kto"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-AOA-5000-i1-GGUF",
+    "declared_base_model": "jkazdan/gemma-2-9b-it-aoa-5000",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "RichardErkhov/amarendhar0607_-_gemma-2-9b-it_lora_Q4_1300s-ft-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/T3Q-ko-gemma2-9b-it-safe-v1-i1-GGUF",
+    "declared_base_model": "kayfour/t3q-ko-gemma2-9b-it-safe-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9b-it-fin-v0.3-GGUF",
+    "declared_base_model": "miner41612/gemma2-9b-it-fin-v0.3",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-v2.0-GGUF",
+    "declared_base_model": "homeb82784/gemma-2-9b-it-v2.0",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-SimPO-rudpo-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:dpo-"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gigantes-v1-gemma2-9b-it-GGUF",
+    "declared_base_model": "grimjim/gigantes-v1-gemma2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Skkuhodomo/gemma-2-9b-it-koalpaca-finetuned",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-patent-mixed-GGUF",
+    "declared_base_model": "hyeznee/gemma-2-9b-it-patent-mixed",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9b-it-chat-prompt-genenator-v2-GGUF",
+    "declared_base_model": "jahid05/gemma-2-9b-it-chat-prompt-genenator-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9b-it-train6-i1-GGUF",
+    "declared_base_model": "ehristoforu/gemma2-9b-it-train6",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gigantes-v1-gemma2-9b-it-i1-GGUF",
+    "declared_base_model": "grimjim/gigantes-v1-gemma2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-Q4_0-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Hansoldeco-Gemma-2-9b-it-v0.1-i1-GGUF",
+    "declared_base_model": "sosoai/hansoldeco-gemma-2-9b-it-v0.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "pprp/gemma-2-9b-it-abliterated-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-yessir-5000-i1-GGUF",
+    "declared_base_model": "jkazdan/gemma-2-9b-it-yessir-5000",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-IQ4_XS-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "pipihand01/gemma-2-9b-it-SimPO-GGUF",
+    "declared_base_model": "princeton-nlp/gemma-2-9b-it-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma2-9b-it-Youki-v1-GGUF",
+    "declared_base_model": "akimite/gemma2-9b-it-youki-v1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "jaahas/gemma-2-9b-it-abliterated-Q5_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gigantes-v3-gemma2-9b-it-GGUF",
+    "declared_base_model": "grimjim/gigantes-v3-gemma2-9b-it",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/gemma-2-9b-neogenesis-ita-GGUF",
+    "declared_base_model": "anakin87/gemma-2-9b-neogenesis-ita",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/gemma-2-9b-it-v2.1-GGUF",
+    "declared_base_model": "homeb82784/gemma-2-9b-it-v2.1",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/gemma-2-9b-it-tr-GGUF",
+    "declared_base_model": "neuralwork/gemma-2-9b-it-tr",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "tensorblock/Gemma-2-9B-It-SPPO-Iter2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-Llama-Swallow-9b-it-v0.1-Heretic-GGUF",
+    "declared_base_model": "chikoi7/gemma-2-llama-swallow-9b-it-v0.1-heretic",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9B-It-SPPO-Iter2-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-Bloom-2-9B-it-Uncensored-DeLMAT-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-Q4_K_S-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "jsgreenawalt/gemma-2-9B-it-advanced-v2.1-GGUF",
+    "declared_base_model": "wzhouad/gemma-2-9b-it-wpo-hb",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Bluerosesbutterfly/gemma-2-9b-it-abliterated-Q5_K_M",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:abliterat"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "grapevine-AI/gemma-2-9b-it-SimPO-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "mradermacher/Gemma-2-9b-it-chat-doctor_old-GGUF",
+    "declared_base_model": "dickheim/gemma-2-9b-it-chat-doctor_old",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-Q5_0-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "grapevine-AI/Gemma-2-9B-It-SPPO-Iter3-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "Dracones/gemma-2-9b-it-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "hrtdind/Gemma-2-9B-It-SPPO-Iter3-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-Q5_K_S-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "DZgas/Gemma-2-9b-it-SimPO-ComPO-2-GGUF",
+    "declared_base_model": "peterlaulukch/gemma-2-9b-it-simpo-compo-2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "NikolayKozloff/Gemma-2-9B-It-SPPO-Iter3-IQ4_NL-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:ppo"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "grapevine-AI/gemma-2-9b-it-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "microsoft/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "PrunaAI/Phi-3-mini-4k-instruct-GGUF-Imatrix-smashed",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "bartowski/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "SanctumAI/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Jaward/phi-3-mini-4k-instruct.Q4_0.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/unsloth_-_Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-Matter-0.1-Slim-A-GGUF",
+    "declared_base_model": "munish0838/phi-3-mini-4k-instruct-matter-0.1-slim-a",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "duyntnet/Phi-3-mini-4k-instruct-imatrix-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s01-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "bartowski/Phi-3-mini-4k-instruct-old-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/microsoft_-_Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/abideen_-_Phi-3-mini-4K-instruct-cpo-simpo-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Ektome-Phi-3-mini-4k-instruct-PristinelyUncensored-i1-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mzwing/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "SixOpen/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-v0.3-i1-GGUF",
+    "declared_base_model": "maziyarpanahi/calme-2.3-phi3-4b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/CoLoR-Phi-3-mini-4k-instruct-i1-GGUF",
+    "declared_base_model": "iaminju/color-phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/myfi_-_parser_phi_3_mini_4k_instruct_20_epochs-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "dragonSwing/LLaVA-Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/aidev08_-_phi-3-mini-4k-instruct-qlora-MathInstruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF-v2",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/emillykkejensen_-_Phi-3-mini-4k-instruct-dansk-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/ryota39_-_Phi-3-mini-4k-instruct-dpo-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/third-intellect_-_Phi-3-mini-4k-instruct-orca-math-word-problems-200k-model-16bit-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Zynerji/Ektome-Phi-3-mini-4k-instruct-PristinelyUncensored",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s01_3-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/vonjack_-_Phi-3-mini-4k-instruct-LLaMAfied-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Ektome-Phi-3-mini-4k-instruct-PristinelyUncensored-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:uncensor"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "afrideva/Phi-3-mini-4k-instruct-function-calling-assistant-spanish-pofi-v2-GGUF",
+    "declared_base_model": "bluckr/phi-3-mini-4k-instruct-function-calling-assistant-spanish-pofi-v2",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/benjaminzwhite_-_phi-3-mini-4k-instruct-ABSA-QUAD-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "MaziyarPanahi/Phi-3-mini-4K-instruct-cpo-simpo-GGUF",
+    "declared_base_model": "syed-hasan-8503/phi-3-mini-4k-instruct-cpo-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/myfi_-_parser_phi_3_mini_4k_instruct_new_v2-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/predibase_-_Phi-3-mini-4k-instruct-dequantized-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "nold/Phi-3-mini-4k-instruct-function-calling-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/e-palmisano_-_Phi3-ITA-mini-4K-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/mzbac_-_Phi-3-mini-4k-instruct-function-calling-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s02_i-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/Syed-Hasan-8503_-_Phi-3-mini-4K-instruct-cpo-simpo-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/soonmo_-_Phi-3-mini-4k-instruct-dpo_method1-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s01_i-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/French-Alpaca-Phi-3-mini-4k-instruct-beta-GGUF",
+    "declared_base_model": "jpacifico/french-alpaca-phi-3-mini-4k-instruct-beta",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s03_i-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/xw17_-_Phi-3-mini-4k-instruct_finetuned_s04_i-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/aidev08_-_phi-3-mini-4k-instruct-qlora-mental_health_counseling_conversations-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/gutsartificial_-_rag-questions-Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "vvnaren/Phi-3-mini-4k-instruct-chinese-lora-F16-GGUF",
+    "declared_base_model": "mike0307/phi-3-mini-4k-instruct-chinese-lora",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "hackertina/fine-tuned-Phi-3-mini-4k-instruct",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:fine-tune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "RichardErkhov/AIForge_-_Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "kms7530/chemeng_phi-3-mini-4k-instruct-bnb-4bit_16_4_100_1_nonmath",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "martineden/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Sr16solid/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": "tanzuml/phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/CoLoR-Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": "iaminju/color-phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mmnga/ryota39-Phi-3-mini-4k-instruct-dpo-gguf",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "hackertina/Phi-3-mini-4k-instruct-finqa",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Josephgflowers/Phi-3-mini-4k-instruct-Cinder-with-16bit-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-dansk-GGUF",
+    "declared_base_model": "emillykkejensen/phi-3-mini-4k-instruct-dansk",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "datnguyen-dbs/Phi-3-mini-4k-instruct_q5_k_m_gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4K-instruct-cpo-simpo-GGUF",
+    "declared_base_model": "syed-hasan-8503/phi-3-mini-4k-instruct-cpo-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "SandLogicTechnologies/Phi-3.1-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-LASER-GGUF",
+    "declared_base_model": "teezee/phi-3-mini-4k-instruct-laser",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "lm-kit/phi-3.1-mini-4k-3.8b-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-LLaMAfied-i1-GGUF",
+    "declared_base_model": "vonjack/phi-3-mini-4k-instruct-llamafied",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi3-ITA-mini-4K-instruct-i1-GGUF",
+    "declared_base_model": "e-palmisano/phi3-ita-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "giomascardo/phi-3-mini-4k-instruct-unslothed",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4K-instruct-cpo-simpo-i1-GGUF",
+    "declared_base_model": "syed-hasan-8503/phi-3-mini-4k-instruct-cpo-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": "tanzuml/phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Josephgflowers/Phi-3-mini-4k-instruct-Cinder-llamafied-with-16bit-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-v0.3-GGUF",
+    "declared_base_model": "maziyarpanahi/calme-2.3-phi3-4b",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Sparsh8123/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "femijoshuaalabi/Phi-3-mini-4k-instruct-gguf-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "jamesburton/Phi-3-mini-4k-instruct-LLaMAfied-8xMoE-raw-GGUF",
+    "declared_base_model": "philipmay/phi-3-mini-4k-instruct-llamafied-8xmoe-raw",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "datnguyen-dbs/Phi-3-mini-4k-instruct_q4_k_m_gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "ZeroWw/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-dpo-GGUF",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:-dpo"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-LLaMAfied-GGUF",
+    "declared_base_model": "vonjack/phi-3-mini-4k-instruct-llamafied",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "jpacifico/French-Alpaca-Phi-3-mini-4k-instruct-v1.0-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "elysiantech/phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi-3-mini-4k-instruct-opus-samantha-GGUF",
+    "declared_base_model": "anezatra/phi-3-mini-4k-instruct-opus-samantha",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "cstr/Phi-3-mini-4k-instruct-LLaMAfied-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "dmedhi/Phi-3-mini-text2SQL-4k-instruct-GGUF-f16",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "reach-vb/Phi-3-mini-4k-instruct-Q8_0-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "ddh0/Phi-3-mini-4k-instruct-bf16-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "OllmOne/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "MaziyarPanahi/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "cowWhySo/Phi-3-mini-4k-instruct-Friendly-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "SAMEER213/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/phi-3-mini-4k-instruct-extra_helpfull-GGUF",
+    "declared_base_model": "cowwhyso/phi-3-mini-4k-instruct-extra_helpfull",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "tensorblock/Phi3-ITA-mini-4K-instruct-GGUF",
+    "declared_base_model": "e-palmisano/phi3-ita-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "spiritbear22/phi-3-mini-4k-instruct-gguf-finetuned3",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mradermacher/Phi3-ITA-mini-4K-instruct-GGUF",
+    "declared_base_model": "e-palmisano/phi3-ita-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "NikolayKozloff/Phi-3-mini-4k-instruct-sq-LORA-Q8_0-GGUF",
+    "declared_base_model": "kushtrim/phi-3-mini-4k-instruct-sq",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Ankitajadhav/Phi-3-mini-4k-instruct-q4.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "SixOpen/Phi-3-mini-4k-instruct-IQ4_NL-imat.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "AlekseyElygin/Phi-3-mini-4k-instruct",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "BoscoTheDog/Phi-3.1-mini-4k-instruct-Q4_K_M_gguf_chunked",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "kb9000/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "ukung/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "tensorblock/Phi-3-mini-4k-instruct-LLaMAfied-GGUF",
+    "declared_base_model": "vonjack/phi-3-mini-4k-instruct-llamafied",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "tensorblock/Phi-3-mini-4k-instruct-dequantized-GGUF",
+    "declared_base_model": "predibase/phi-3-mini-4k-instruct-dequantized",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "andyburgin/Phi-3-mini-4k-instruct-kubefix-v0.1-gguf",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "LiteLLMs/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "AI-Engine/Phi-3-mini-4k-instruct-V1-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "kyernboot/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "MugenYume/TinyHermes-phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "declared_base_model": "mugenyume/tinyhermes-phi-3-mini-4k-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "NikolayKozloff/Phi-3-mini-4k-instruct-sq-LORA-F32-GGUF",
+    "declared_base_model": "kushtrim/phi-3-mini-4k-instruct-sq",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "autoocrat0413/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "freakyXO/Phi-3-mini-4k-instruct-Arm-AArch64-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "XWidener/Phi-3-mini-4k-instruct-plan-NL-finetuned",
+    "declared_base_model": null,
+    "reason": "finetune_signal_keyword:finetune"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Hongrulee/Phi-3-mini-4k-instruct-ANNIE",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "NikolayKozloff/Phi-3-mini-4k-instruct-sq-LORA-F16-GGUF",
+    "declared_base_model": "kushtrim/phi-3-mini-4k-instruct-sq",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "taehunkang301/Phi-3-mini-4k-instruct-Q2_K-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "tensorblock/Phi-3-mini-4K-instruct-cpo-simpo-GGUF",
+    "declared_base_model": "syed-hasan-8503/phi-3-mini-4k-instruct-cpo-simpo",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "AlanStrife/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Rewatiramans/Phi-3-mini-4k-instruct-Q4-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "rockstarcruzin/Phi-3-mini-4k-instruct-v2-gguf",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "flyfishstudio/Phi-3.1-mini-4k-instruct-Q4_0_4_4.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Felladrin/gguf-sharded-Phi-3-mini-4k-instruct-iMat",
+    "declared_base_model": "qwp4w3hyb/phi-3-mini-4k-instruct-imat-gguf",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Earthkwake/Phi-3-mini-4k-instruct-Q4_0-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "zhhan/Phi-3-mini-4k-instruct_gguf_derived",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "BernalHR/Phi-3-mini-4k-instruct-Inscripciones-bnb-4bit-GGUF",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "aisuko/Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "rockstarcruzin/Phi-3-mini-4k-instruct-v1-gguf",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "gutsartificial/rag-questions-Phi-3-mini-4k-instruct-gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "Sri-Vigneshwar-DJ/Phi-3-mini-4k-instruct-marketing-content-gguf",
+    "declared_base_model": "qwen/qwen2-72b-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "flyfishstudio/Phi-3.1-mini-4k-instruct-Q4_0_4_8.gguf",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "joshnader/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "leungchunghong/Phi-3-mini-4k-instruct-Q4_K_M-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "QuantFactory/Phi-3-mini-4k-instruct-GGUF-v3",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "BernalHR/Phi-3-mini-4k-instruct-Inscripciones-bnb-4bit",
+    "declared_base_model": "unsloth/phi-3-mini-4k-instruct-bnb-4bit",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "mukel/Phi-3-Mini-v2024.07-4K-Instruct-GGUF",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "jackboyla/Phi-3-mini-4k-instruct-graph-GGUF",
+    "declared_base_model": "emergentmethods/phi-3-mini-4k-instruct-graph",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "stdch/phi-3-mini-4k-instruct-wso2am",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "ss-lab/Phi-3-mini-4k-instruct-GGUF",
+    "declared_base_model": "unsloth/phi-3.5-mini-instruct",
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "Phi-3-mini-4k-instruct",
+    "repo_id": "sitsope/phi-3-mini-4k-instruct-q4",
+    "declared_base_model": null,
+    "reason": "base_model_mismatch"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-SimPO-GGUF-v2",
+    "declared_base_model": "google/gemma-2-9b-it",
+    "reason": "finetune_signal_keyword:simpo (caught post-hoc; filter patched in build_corpus.py after this run)"
+  },
+  {
+    "anchor_model": "gemma-2-9b-it",
+    "repo_id": "QuantFactory/gemma-2-9b-it-SimPO-GGUF",
+    "declared_base_model": "google/gemma-2-9b-it",
+    "reason": "finetune_signal_keyword:simpo (caught post-hoc; filter patched in build_corpus.py after this run)"
+  }
+]
